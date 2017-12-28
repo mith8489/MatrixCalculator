@@ -1,0 +1,30 @@
+
+.visual-matrix
+{
+    -fx-alignment: center;
+    -fx-translate-y: 0px;
+}
+
+.visual-matrix > *
+{
+    -fx-max-width: 50px;
+    -fx-hgap: 0;
+    -fx-vgap: 0;
+}
+
+.work-space
+{
+    -fx-spacing: 50px;
+}
+
+.top-bottom-bar
+{
+    -fx-min-height: 100px;
+    -fx-pref-height: 20%;
+    -fx-background-color: darkorange;
+}
+
+.operator-symbol
+{
+    -fx-font-size: 24px;
+}
