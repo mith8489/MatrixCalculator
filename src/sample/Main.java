@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 public class Main extends Application {
 
     private CalcGUI calcGUI;
-    private final int WINDOW_WIDTH = 1000;
+    private final int WINDOW_WIDTH = 1200;
     private final int WINDOW_HEIGHT = 750;
 
     @Override

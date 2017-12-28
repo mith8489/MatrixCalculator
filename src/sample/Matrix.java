@@ -26,10 +26,17 @@ public class Matrix {
         data[i][j] = val;
     }
 
+    public double getElement(int i, int j)
+    {
+        return data[i][j];
+    }
+
     /**--------------------CONSTRUCTORS--------------------------------------------------*/
 
     public Matrix(int M, int N)
     {
+        this.M = M;
+        this.N = N;
         data = new double[M][N];
     }
 

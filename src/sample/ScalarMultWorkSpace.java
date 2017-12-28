@@ -1,36 +1,34 @@
 package sample;
 
-import javafx.beans.property.SimpleStringProperty;
 import javafx.scene.Group;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.GridPane;
+
+public class ScalarMultWorkSpace extends WorkSpace {
 
 
-public class AdditionWorkSpace extends WorkSpace {
-
-    public AdditionWorkSpace(CalcGUI calcGUI)
+    public ScalarMultWorkSpace(CalcGUI calcGUI)
     {
         super(calcGUI);
-        dimensionControls.getChildren().addAll(matrixAControls, matrixBControls, controlButton);
+        vMatrixB = new VisualMatrix(1, 1);
+        dimensionControls.getChildren().addAll(matrixAControls, controlButton);
         getChildren().add(new Group(dimensionControls));
         showMatrices();
     }
 
     private void showMatrices()
     {
-        operatorSymbol.setText("+");
-
+        operatorSymbol.setText("×");
         getChildren().addAll(new Group(vMatrixA), operatorSymbol, new Group(vMatrixB), equalitySign, new Group(vMatrixC));
     }
 
-
     @Override
     public void doOperation() {
-
         matrixA = createMatrix(matrixA, vMatrixA);
-        matrixB = createMatrix(matrixB, vMatrixB);
 
-        matrixC = matrixA.plus(matrixB);
+        TextField textField = (TextField) vMatrixB.getChildren().get(0);
+        int scalar = Integer.parseInt(textField.getText());
+
+        matrixC = matrixA.scalarMult(scalar);
 
         vMatrixC = createVisualMatrix(matrixC, vMatrixC);
     }
@@ -40,17 +38,9 @@ public class AdditionWorkSpace extends WorkSpace {
     {
         int newARows = Integer.parseInt(matrixARowField.getText());
         int newACols = Integer.parseInt(matrixAColField.getText());
-        int newBRows = Integer.parseInt(matrixBRowField.getText());
-        int newBCols = Integer.parseInt(matrixBColField.getText());
 
         vMatrixA = new VisualMatrix(newARows, newACols);
-        vMatrixB = new VisualMatrix(newBRows, newBCols);
-        System.out.println("CHANGING MATRIX DIMENSIONS");
-
-        if (vMatrixA.getM() == vMatrixB.getM() && vMatrixA.getN() == vMatrixB.getN()) vMatrixC = new VisualMatrix(newARows, newACols);
-        else
-        {
-        }
+        vMatrixC = new VisualMatrix(newARows, newACols);
 
         getChildren().clear();
         getChildren().addAll(new Group(dimensionControls), new Group(vMatrixA), operatorSymbol, new Group(vMatrixB), equalitySign, new Group(vMatrixC));

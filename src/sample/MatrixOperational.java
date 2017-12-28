@@ -2,5 +2,6 @@ package sample;
 
 public interface MatrixOperational {
 
-    public Matrix doOperation();
+    public void doOperation();
+    public void updateMatrixDimensions();
 }

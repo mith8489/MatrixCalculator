@@ -2,13 +2,11 @@ package sample;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.scene.Group;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.GridPane;
 
 
-public class AdditionWorkSpace extends WorkSpace {
+public class SubtractionWorkSpace extends WorkSpace {
 
-    public AdditionWorkSpace(CalcGUI calcGUI)
+    public SubtractionWorkSpace(CalcGUI calcGUI)
     {
         super(calcGUI);
         dimensionControls.getChildren().addAll(matrixAControls, matrixBControls, controlButton);
@@ -18,7 +16,7 @@ public class AdditionWorkSpace extends WorkSpace {
 
     private void showMatrices()
     {
-        operatorSymbol.setText("+");
+        operatorSymbol.setText("-");
 
         getChildren().addAll(new Group(vMatrixA), operatorSymbol, new Group(vMatrixB), equalitySign, new Group(vMatrixC));
     }
@@ -30,7 +28,7 @@ public class AdditionWorkSpace extends WorkSpace {
         matrixA = createMatrix(matrixA, vMatrixA);
         matrixB = createMatrix(matrixB, vMatrixB);
 
-        matrixC = matrixA.plus(matrixB);
+        matrixC = matrixA.minus(matrixB);
 
         vMatrixC = createVisualMatrix(matrixC, vMatrixC);
     }
@@ -45,11 +43,14 @@ public class AdditionWorkSpace extends WorkSpace {
 
         vMatrixA = new VisualMatrix(newARows, newACols);
         vMatrixB = new VisualMatrix(newBRows, newBCols);
-        System.out.println("CHANGING MATRIX DIMENSIONS");
 
-        if (vMatrixA.getM() == vMatrixB.getM() && vMatrixA.getN() == vMatrixB.getN()) vMatrixC = new VisualMatrix(newARows, newACols);
+        if (vMatrixA.getM() == vMatrixB.getM() && vMatrixA.getN() == vMatrixB.getN())
+        {
+            vMatrixC = new VisualMatrix(newARows, newACols);
+        }
         else
         {
+
         }
 
         getChildren().clear();

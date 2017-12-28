@@ -37,7 +37,7 @@ public class VisualMatrix extends GridPane {
         for (int j = 0; j < N; j++)
         { for (int i = 0; i < M; i++)
         {
-          add(new TextField(), j, i);
+          add(new TextField("0"), j, i);
         }
         }
     }
