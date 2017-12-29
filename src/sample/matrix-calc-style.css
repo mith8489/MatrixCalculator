@@ -1,4 +1,9 @@
 
+.button
+{
+    -fx-font-weight: 800;
+}
+
 .calc-gui
 {
     -fx-background-color: #57AAFF;
@@ -47,6 +52,8 @@
 .dimension-controls
 {
     -fx-spacing: 20px;
+    -fx-min-height: 100px;
+    -fx-max-height: 150px;
 }
 
 .dimension-controls > * > *
@@ -66,10 +73,34 @@
     -fx-font-weight: 800;
 }
 
+.control-button
+{
+    -fx-translate-y: 48;
+    -fx-font-size: 14px;
+}
+
+.matrix-error-text
+{
+    -fx-font-size: 24px;
+    -fx-font-weight: 800;
+    -fx-fill: red;
+    -fx-translate-y: 20px;
+}
+
 .work-space
 {
-    -fx-spacing: 20px;
+    -fx-spacing: 0px;
 }
+
+.work-space > *
+{
+    -fx-alignment: center;
+    -fx-min-height: 300px;
+    -fx-translate-y: -100;
+    -fx-spacing: 25px;
+}
+
+
 
 .top-bottom-bar
 {

@@ -11,9 +11,12 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 
-public class WorkSpace extends HBox implements MatrixOperational {
+public class WorkSpace extends VBox implements MatrixOperational {
 
     protected CalcGUI calcGUI;
+
+    protected HBox matrixBox;
+    protected HBox controlBox;
 
     protected Matrix matrixA; // First matrix
     protected Matrix matrixB; // Second matrix (if necessary)
@@ -26,7 +29,7 @@ public class WorkSpace extends HBox implements MatrixOperational {
     protected Text operatorSymbol;
     protected Text equalitySign;
 
-    protected VBox dimensionControls;
+    protected HBox dimensionControls;
     protected VBox matrixAControls;
     protected VBox matrixBControls;
 
@@ -37,9 +40,14 @@ public class WorkSpace extends HBox implements MatrixOperational {
 
     protected Button controlButton;
 
+    protected Text matrixErrorText;
+
     public WorkSpace(CalcGUI calcGUI)
     {
         this.calcGUI = calcGUI;
+        matrixBox = new HBox();
+        controlBox = new HBox();
+        getChildren().addAll(controlBox, matrixBox);
 
         getStyleClass().add("work-space");
         vMatrixA = new VisualMatrix(3, 3);
@@ -52,6 +60,8 @@ public class WorkSpace extends HBox implements MatrixOperational {
         operatorSymbol.getStyleClass().add("operator-symbol");
         equalitySign = new Text("=");
         equalitySign.getStyleClass().add("operator-symbol");
+        matrixErrorText = new Text("INCOMPATIBLE \nMATRICES");
+        matrixErrorText.getStyleClass().add("matrix-error-text");
     }
 
     private void makeDimensionControls()
@@ -60,8 +70,9 @@ public class WorkSpace extends HBox implements MatrixOperational {
         matrixBControls = makeDimensionControlBox("B");
 
         controlButton = new Button("Save");
+        controlButton.getStyleClass().add("control-button");
         controlButton.setOnAction(event -> updateMatrixDimensions());
-        dimensionControls = new VBox();
+        dimensionControls = new HBox();
         dimensionControls.getStyleClass().add("dimension-controls");
     }
 

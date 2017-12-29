@@ -10,7 +10,7 @@ public class Main extends Application {
 
     private CalcGUI calcGUI;
     private final int WINDOW_WIDTH = 1200;
-    private final int WINDOW_HEIGHT = 750;
+    private final int WINDOW_HEIGHT = 950;
 
     @Override
     public void start(Stage primaryStage) throws Exception{

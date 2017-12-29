@@ -12,7 +12,7 @@ public class AdditionWorkSpace extends WorkSpace {
     {
         super(calcGUI);
         dimensionControls.getChildren().addAll(matrixAControls, matrixBControls, controlButton);
-        getChildren().add(new Group(dimensionControls));
+        controlBox.getChildren().add(new Group(dimensionControls));
         showMatrices();
     }
 
@@ -20,7 +20,7 @@ public class AdditionWorkSpace extends WorkSpace {
     {
         operatorSymbol.setText("+");
 
-        getChildren().addAll(new Group(vMatrixA), operatorSymbol, new Group(vMatrixB), equalitySign, new Group(vMatrixC));
+        matrixBox.getChildren().addAll(new Group(vMatrixA), operatorSymbol, new Group(vMatrixB), equalitySign, new Group(vMatrixC));
     }
 
 
@@ -47,12 +47,22 @@ public class AdditionWorkSpace extends WorkSpace {
         vMatrixB = new VisualMatrix(newBRows, newBCols);
         System.out.println("CHANGING MATRIX DIMENSIONS");
 
-        if (vMatrixA.getM() == vMatrixB.getM() && vMatrixA.getN() == vMatrixB.getN()) vMatrixC = new VisualMatrix(newARows, newACols);
+        if (vMatrixA.getM() == vMatrixB.getM() && vMatrixA.getN() == vMatrixB.getN())
+        {
+            try {
+                controlBox.getChildren().remove(matrixErrorText);
+            } catch (NullPointerException npe) {}
+
+            vMatrixC = new VisualMatrix(newARows, newACols);
+        }
         else
         {
+            try {
+                controlBox.getChildren().add(matrixErrorText);
+            } catch (IllegalArgumentException iae) {}
         }
 
-        getChildren().clear();
-        getChildren().addAll(new Group(dimensionControls), new Group(vMatrixA), operatorSymbol, new Group(vMatrixB), equalitySign, new Group(vMatrixC));
+        matrixBox.getChildren().clear();
+        matrixBox.getChildren().addAll(new Group(vMatrixA), operatorSymbol, new Group(vMatrixB), equalitySign, new Group(vMatrixC));
     }
 }
