@@ -3,32 +3,31 @@ package sample;
 import javafx.scene.Group;
 import javafx.scene.control.TextField;
 
-public class ScalarMultWorkSpace extends WorkSpace {
+public class TransposeWorkSpace extends WorkSpace {
 
+    String yTranslateSymbolDistance;
 
-    public ScalarMultWorkSpace(CalcGUI calcGUI)
+    public TransposeWorkSpace(CalcGUI calcGUI)
     {
         super(calcGUI);
-        vMatrixB = new VisualMatrix(1, 1, true);
         dimensionControls.getChildren().addAll(matrixAControls, controlButton);
         controlBox.getChildren().add(new Group(dimensionControls));
+
         showMatrices();
     }
 
     private void showMatrices()
     {
-        operatorSymbol.setText("×");
-        matrixBox.getChildren().addAll(new Group(vMatrixA), operatorSymbol, new Group(vMatrixB), equalitySign, new Group(vMatrixC));
+        operatorSymbol.setText("T");
+        operatorSymbol.setStyle("-fx-translate-y:"+ Integer.toString((vMatrixA.getM() * -17) - 9) + "px; -fx-translate-x: -15px");
+        matrixBox.getChildren().addAll(new Group(vMatrixA), operatorSymbol, equalitySign, new Group(vMatrixC));
     }
 
     @Override
     public void doOperation() {
         matrixA = createMatrix(matrixA, vMatrixA);
 
-        TextField textField = (TextField) vMatrixB.getChildren().get(0);
-        int scalar = Integer.parseInt(textField.getText());
-
-        matrixC = matrixA.scalarMult(scalar);
+        matrixC = matrixA.transpose();
 
         vMatrixC = createVisualMatrix(matrixC, vMatrixC);
     }
@@ -40,9 +39,10 @@ public class ScalarMultWorkSpace extends WorkSpace {
         int newACols = Integer.parseInt(matrixAColField.getText());
 
         vMatrixA = new VisualMatrix(newARows, newACols, true);
-        vMatrixC = new VisualMatrix(newARows, newACols, false);
+        vMatrixC = new VisualMatrix(newACols, newARows, false);
 
         matrixBox.getChildren().clear();
-        matrixBox.getChildren().addAll(new Group(vMatrixA), operatorSymbol, new Group(vMatrixB), equalitySign, new Group(vMatrixC));
+        operatorSymbol.setStyle("-fx-translate-y:"+ Integer.toString((vMatrixA.getM() * -17) - 9) + "px; -fx-translate-x: -15px");
+        matrixBox.getChildren().addAll(new Group(vMatrixA), operatorSymbol, equalitySign, new Group(vMatrixC));
     }
 }

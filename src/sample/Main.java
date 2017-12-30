@@ -24,6 +24,11 @@ public class Main extends Application {
 
 
     public static void main(String[] args) {
+
+    //    double[][] matrixData = {{1,2,3}, {4,8,6}, {7,5,9}};
+    //    Matrix matrix = new Matrix(matrixData);
+    //    matrix.invert();
+
         launch(args);
     }
 }

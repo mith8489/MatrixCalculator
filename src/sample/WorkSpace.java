@@ -2,6 +2,7 @@ package sample;
 
 import javafx.beans.property.StringProperty;
 import javafx.collections.ObservableList;
+import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -11,7 +12,11 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 
+import java.text.DecimalFormat;
+
 public class WorkSpace extends VBox implements MatrixOperational {
+
+    protected DecimalFormat decimalFormat = new DecimalFormat("#.##");
 
     protected CalcGUI calcGUI;
 
@@ -50,9 +55,9 @@ public class WorkSpace extends VBox implements MatrixOperational {
         getChildren().addAll(controlBox, matrixBox);
 
         getStyleClass().add("work-space");
-        vMatrixA = new VisualMatrix(3, 3);
-        vMatrixB = new VisualMatrix(3, 3);
-        vMatrixC = new VisualMatrix(3, 3);
+        vMatrixA = new VisualMatrix(3, 3, true);
+        vMatrixB = new VisualMatrix(3, 3, true);
+        vMatrixC = new VisualMatrix(3, 3, false);
 
         makeDimensionControls();
 
@@ -117,7 +122,43 @@ public class WorkSpace extends VBox implements MatrixOperational {
 
     public void updateMatrixDimensions()
     {
+        setNewDimensions();
+        checkCompatibility();
 
+
+        matrixBox.getChildren().clear();
+        matrixBox.getChildren().addAll(new Group(vMatrixA), operatorSymbol, new Group(vMatrixB), equalitySign, new Group(vMatrixC));
+    }
+
+    protected void setNewDimensions()
+    {
+        int newARows = Integer.parseInt(matrixARowField.getText());
+        int newACols = Integer.parseInt(matrixAColField.getText());
+        int newBRows = Integer.parseInt(matrixBRowField.getText());
+        int newBCols = Integer.parseInt(matrixBColField.getText());
+
+        vMatrixA = new VisualMatrix(newARows, newACols, true);
+        vMatrixB = new VisualMatrix(newBRows, newBCols, true);
+    }
+
+    protected void checkCompatibility()
+    {
+        if (vMatrixA.getM() == vMatrixB.getM() && vMatrixA.getN() == vMatrixB.getN())
+        {
+            try {
+                controlBox.getChildren().remove(matrixErrorText);
+            } catch (NullPointerException npe) {}
+
+            calcGUI.toggleSolveButton(true);
+            vMatrixC = new VisualMatrix(vMatrixA.getM(), vMatrixA.getN(), false);
+        }
+        else
+        {
+            try {
+                controlBox.getChildren().add(matrixErrorText);
+                calcGUI.toggleSolveButton(false);
+            } catch (IllegalArgumentException iae) {}
+        }
     }
 
     protected Matrix createMatrix(Matrix matrix, VisualMatrix vMatrix)
@@ -139,7 +180,9 @@ public class WorkSpace extends VBox implements MatrixOperational {
         { for (int j = 0; j < matrix.getN(); j++)
         {
             Node textField = getNodeByIndex(i, j, vMatrix);
-            ((TextField) textField).setText(Double.toString(matrix.getElement(i, j)));
+            String text = decimalFormat.format(matrix.getElement(i, j));
+            if (text.equals("-0")) text = "0";
+            ((TextField) textField).setText(text);
         }
         }
 

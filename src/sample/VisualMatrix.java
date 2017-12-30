@@ -8,6 +8,8 @@ public class VisualMatrix extends GridPane {
     private int M;
     private int N;
 
+    private boolean isEditable;
+
     public void setM(int m) {
         M = m;
     }
@@ -24,11 +26,12 @@ public class VisualMatrix extends GridPane {
         return N;
     }
 
-    public VisualMatrix(int i, int j)
+    public VisualMatrix(int i, int j, boolean isEditable)
     {
         getStyleClass().add("visual-matrix");
         M = i;
         N = j;
+        this.isEditable = isEditable;
         makeFields();
     }
 
@@ -37,7 +40,14 @@ public class VisualMatrix extends GridPane {
         for (int j = 0; j < N; j++)
         { for (int i = 0; i < M; i++)
         {
-          add(new TextField("0"), j, i);
+            TextField textField = new TextField("0");
+            if (!isEditable)
+            {
+                textField.setEditable(false);
+                textField.setMouseTransparent(true);
+            }
+            add(textField, j, i);
+
         }
         }
     }

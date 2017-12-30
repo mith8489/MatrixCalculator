@@ -18,14 +18,6 @@ import javafx.util.StringConverter;
 
 public class CalcGUI extends BorderPane {
 
-    private Matrix matrixA; // First matrix
-    private Matrix matrixB; // Second matrix (if necessary)
-    private Matrix matrixC; //Solution matrix
-
-    private VisualMatrix vMatrixA; // First visual matrix
-    private VisualMatrix vMatrixB; // Second visual matrix (if necessary)
-    private VisualMatrix vMatrixC; //Solution visual matrix
-
     private HBox topBar;
     private ComboBox operationSelector;
     private Button selectOperationButton;
@@ -35,28 +27,29 @@ public class CalcGUI extends BorderPane {
 
     private WorkSpace workSpace;
 
-    public CalcGUI()
-    {
+    public CalcGUI() {
         getStyleClass().add("calc-gui");
         makeWorkSpaces();
         makeTopBar();
         makeBottomBar();
     }
 
-    private void makeWorkSpaces()
-    {
+    private void makeWorkSpaces() {
         workSpace = new AdditionWorkSpace(this);
 
         setCenter(workSpace);
         workSpace.setAlignment(Pos.CENTER);
     }
 
-    private void makeTopBar()
-    {
+    private void makeTopBar() {
         ObservableList<String> operationTypes = FXCollections.observableArrayList(
                 "Addition",
                 "Subtraction",
-                "Scalar Multiplication"
+                "Scalar Multiplication",
+                "Matrix Multiplication",
+                "Gauss-Jordan Elimination",
+                "Transposition",
+                "Inversion"
         );
         operationSelector = new ComboBox(operationTypes);
         operationSelector.getSelectionModel().selectFirst();
@@ -70,8 +63,13 @@ public class CalcGUI extends BorderPane {
         topBar.getChildren().addAll(operationSelector, selectOperationButton);
         setTop(topBar);
     }
-    private void makeBottomBar()
+
+    public void toggleSolveButton(boolean interactable)
     {
+        solveButton.setDisable(!interactable);
+    }
+
+    private void makeBottomBar() {
         Button clearButton = new Button("Clear");
         clearButton.getStyleClass().add("solve-button");
         clearButton.setOnAction(event -> workSpace.clearMatrices());
@@ -87,66 +85,43 @@ public class CalcGUI extends BorderPane {
         setBottom(bottomBar);
     }
 
-    private void changeWorkSpace(String operationType)
-    {
+    private void changeWorkSpace(String operationType) {
         setCenter(null);
-        switch (operationType)
-        {
-            case "Addition": workSpace = new AdditionWorkSpace(this);
-            break;
+        switch (operationType) {
+            case "Addition":
+                workSpace = new AdditionWorkSpace(this);
+                break;
 
-            case "Subtraction": workSpace = new SubtractionWorkSpace(this);
-            break;
+            case "Subtraction":
+                workSpace = new SubtractionWorkSpace(this);
+                break;
 
-            case "Scalar Multiplication": workSpace = new ScalarMultWorkSpace(this);
-            break;
+            case "Scalar Multiplication":
+                workSpace = new ScalarMultWorkSpace(this);
+                break;
 
-            default: workSpace = null;
+            case "Matrix Multiplication":
+                workSpace = new MatrixMultWorkSpace(this);
+                break;
+
+            case "Gauss-Jordan Elimination":
+                workSpace = new GaussJordanWorkSpace(this);
+                break;
+
+            case "Transposition":
+                workSpace = new TransposeWorkSpace(this);
+                break;
+
+            case "Inversion":
+                workSpace = new InversionWorkSpace(this);
+                break;
+
+            default:
+                workSpace = null;
         }
         setCenter(workSpace);
         workSpace.setAlignment(Pos.CENTER);
+        toggleSolveButton(true);
     }
 
-/*    private void defineComboBoxBehaviour()
-    {
-        operationSelector.setCellFactory(new Callback<ListView<WorkSpace>,ListCell<WorkSpace>>() {
-
-                @Override
-                public ListCell<WorkSpace> call(ListView<WorkSpace> p) {
-
-                    final ListCell<WorkSpace> cell = new ListCell<WorkSpace>() {
-
-                        @Override
-                        protected void updateItem(WorkSpace workSpace, boolean bln) {
-                            super.updateItem(workSpace, bln);
-
-                            if (workSpace != null) {
-                                setText(workSpace.getWorkSpaceName().get());
-                            } else {
-                                setText(null);
-                            }
-                        }
-
-                    };
-
-                    return cell;
-                }
-            });
-
-
-        operationSelector.setConverter(new StringConverter<WorkSpace>() {
-            @Override
-            public String toString(WorkSpace workSpace) {
-                if (workSpace == null) {
-                    return null;
-                } else {
-                    return workSpace.getWorkSpaceName().get();
-                }
-            }
-
-            @Override
-            public WorkSpace fromString(String personString) {
-                return null; // No conversion fromString needed.
-            }
-        });*/
-    }
+}
