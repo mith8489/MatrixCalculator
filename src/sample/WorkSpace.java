@@ -74,6 +74,9 @@ public class WorkSpace extends VBox implements MatrixOperational {
         matrixAControls = makeDimensionControlBox("A");
         matrixBControls = makeDimensionControlBox("B");
 
+        TextField[] controlFields = {matrixARowField, matrixAColField, matrixBRowField, matrixBColField};
+        setClickedBehaviour(controlFields);
+
         controlButton = new Button("Save");
         controlButton.getStyleClass().add("control-button");
         controlButton.setOnAction(event -> updateMatrixDimensions());
@@ -118,6 +121,14 @@ public class WorkSpace extends VBox implements MatrixOperational {
 
         VBox matrixControls = new VBox(matrixLabel, matrixFields);
         return matrixControls;
+    }
+
+    private void setClickedBehaviour(TextField[] fields)
+    {
+        for (TextField field : fields)
+        {
+            field.setOnMouseClicked(event -> field.setText(""));
+        }
     }
 
     public void updateMatrixDimensions()
@@ -168,7 +179,9 @@ public class WorkSpace extends VBox implements MatrixOperational {
         { for (int j = 0; j < matrix.getN(); j++)
         {
             TextField textField = (TextField) getNodeByIndex(i, j, vMatrix);
-            matrix.setElement(i, j, Double.parseDouble(textField.getText()));
+            String text = textField.getText();
+            if (text.equals("")) text = "0";
+            matrix.setElement(i, j, Double.parseDouble(text));
         }
         }
         return matrix;
@@ -208,10 +221,15 @@ public class WorkSpace extends VBox implements MatrixOperational {
         VisualMatrix[] vMatrices = {vMatrixA, vMatrixB, vMatrixC};
         for (VisualMatrix vMatrix : vMatrices)
         {
-            for (Node textField : vMatrix.getChildren())
-            {
-                ((TextField) textField).setText("0");
-            }
+            clearMatrix(vMatrix);
+        }
+    }
+
+    protected void clearMatrix(VisualMatrix vMatrix)
+    {
+        for (Node textField : vMatrix.getChildren())
+        {
+            ((TextField) textField).setText("");
         }
     }
 

@@ -2,8 +2,11 @@ package sample;
 
 import javafx.scene.Group;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 
 public class InversionWorkSpace extends WorkSpace{
+
+    private Text wrongRankText;
 
     public InversionWorkSpace(CalcGUI calcGUI)
     {
@@ -35,10 +38,23 @@ public class InversionWorkSpace extends WorkSpace{
     @Override
     public void doOperation() {
         matrixA = createMatrix(matrixA, vMatrixA);
+        clearMatrix(vMatrixC);
 
-        matrixC = matrixA.invert();
+        if (matrixA.getRank() == matrixA.getM())
+        {
+            try {matrixBox.getChildren().remove(wrongRankText);}
+            catch (NullPointerException npe) {};
+            matrixC = matrixA.invert();
+            vMatrixC = createVisualMatrix(matrixC, vMatrixC);
+        }
+        else
+        {
+            wrongRankText = new Text("Matrix rank < " + matrixA.getM() + ".\nMatrix not invertible.");
+            wrongRankText.getStyleClass().add("matrix-error-text");
+            matrixBox.getChildren().add(wrongRankText);
+        }
 
-        vMatrixC = createVisualMatrix(matrixC, vMatrixC);
+
     }
 
     @Override
@@ -49,6 +65,8 @@ public class InversionWorkSpace extends WorkSpace{
 
         vMatrixA = new VisualMatrix(newARows, newACols, true);
 
+        try {matrixBox.getChildren().remove(wrongRankText);}
+        catch (NullPointerException npe) {}
 
         checkCompatibility(newARows, newACols);
 

@@ -18,7 +18,7 @@ public class ScalarMultWorkSpace extends WorkSpace {
     private void showMatrices()
     {
         operatorSymbol.setText("×");
-        matrixBox.getChildren().addAll(new Group(vMatrixA), operatorSymbol, new Group(vMatrixB), equalitySign, new Group(vMatrixC));
+        matrixBox.getChildren().addAll(new Group(vMatrixB), operatorSymbol, new Group(vMatrixA), equalitySign, new Group(vMatrixC));
     }
 
     @Override
@@ -43,6 +43,6 @@ public class ScalarMultWorkSpace extends WorkSpace {
         vMatrixC = new VisualMatrix(newARows, newACols, false);
 
         matrixBox.getChildren().clear();
-        matrixBox.getChildren().addAll(new Group(vMatrixA), operatorSymbol, new Group(vMatrixB), equalitySign, new Group(vMatrixC));
+        matrixBox.getChildren().addAll(new Group(vMatrixB), operatorSymbol, new Group(vMatrixA), equalitySign, new Group(vMatrixC));
     }
 }

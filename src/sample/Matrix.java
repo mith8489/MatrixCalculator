@@ -19,8 +19,20 @@ public class Matrix {
         return N;
     }
 
+    public void setM(int m) {
+        M = m;
+    }
+
+    public void setN(int n) {
+        N = n;
+    }
+
     public double[][] getData() {
         return data;
+    }
+
+    public void setData(double[][] data) {
+        this.data = data;
     }
 
     public void setElement(int i, int j, double val)
@@ -97,11 +109,11 @@ public class Matrix {
      * @param j Row to subtract.
      * @param scalar Factor to multiply the j row by before subtraction.
      */
-    public void subtractRows(int i, int j, double scalar)
+    public void addRows(int i, int j, double scalar)
     {
         for (int k = 0; k < N; k++)
         {
-            data[i][k] = data[i][k] - data[j][k] * scalar;
+            data[i][k] = data[i][k] + data[j][k] * scalar;
         }
     }
 
@@ -184,6 +196,24 @@ public class Matrix {
     }
 
     /**
+     * Gets the transpose of this matrix (row and column indices swapped).
+     * @return Transpose of this matrix.
+     */
+    public Matrix transpose()
+    {
+        Matrix transposedMatrix = new Matrix(N, M);
+
+        for (int i = 0; i < M; i++)
+        {
+            for (int j = 0; j < N; j++)
+            {
+                transposedMatrix.setElement(j, i, data[i][j]);
+            }
+        }
+        return transposedMatrix;
+    }
+
+    /**
      * Performs matrix multiplication with this matrix and another matrix.
      * @param matrixB Second matrix in the multiplication (this × matrixB).
      * @return Resultant matrix of matrix multiplication.
@@ -213,6 +243,17 @@ public class Matrix {
         return matrixC;
     }
 
+    public void swap(Matrix matrixB)
+    {
+        Matrix tempMatrix = new Matrix(getData());
+        setData(matrixB.getData());
+        setM(data.length);
+        setN(data[0].length);
+        matrixB.setData(tempMatrix.getData());
+        matrixB.setM(matrixB.getData().length);
+        matrixB.setN(matrixB.getData()[0].length);
+    }
+
     /**--------------------GAUSS-JORDAN METHODS--------------------------------------------------*/
 
     /**
@@ -228,6 +269,7 @@ public class Matrix {
                 if (data[j][i] == 1)
                 {
                     swapRows(i, j);
+                    show();
                     break;
                 }
             }
@@ -238,11 +280,16 @@ public class Matrix {
                     if (data[j][i] != 0)
                     {
                         swapRows(i, j);
+                        show();
                         break;
                     }
                 }
             }
-            divideRow(i, data[i][i]);
+            if (data[i][i] != 0)
+            {
+                divideRow(i, data[i][i]);
+                show();
+            }
         }
     }
 
@@ -250,53 +297,34 @@ public class Matrix {
      * Performs a Gauss-Jordan elimination on an augmented matrix.
      * @return :: Reduced row echelon form of the given matrix.
      */
-    public Matrix gaussJordanEliminate()
+    public Matrix gaussJordanEliminate(boolean isAugmented)
     {
+        int columnReduction = 0;
+        if (isAugmented) columnReduction = 1;
         Matrix matrix = this;
-        for (int i = 0; i < (matrix.getN() - 1); i++)
+        for (int i = 0; i < (matrix.getN() - columnReduction); i++)
         {
-            System.out.println("SOLVING ROW " + i);
+            System.out.println("SOLVING ROW " + (i+1));
             System.out.println("----------------");
             matrix.show();
-            if (!(i >= matrix.getM())) matrix.setPivotElement(i);
+            if (!(i >= matrix.getM()))
+            {
+                matrix.setPivotElement(i);
+            }
             else break;
-            matrix.show();
             for (int j = 0; j < matrix.getM(); j++)
             {
-                matrix.show();
                 if (j != i)
                 {
-                    matrix.subtractRows(j, i, matrix.getData()[j][i]);
+                    matrix.addRows(j, i, -matrix.getData()[j][i]);
+                    matrix.show();
                 }
             }
         }
-        matrix.show();
         return matrix;
     }
 
-    /**
-     *
-     */
-    public Matrix transpose()
-    {
-        Matrix transposedMatrix = new Matrix(N, M);
-
-        for (int i = 0; i < M; i++)
-        {
-            for (int j = 0; j < N; j++)
-            {
-                transposedMatrix.setElement(j, i, data[i][j]);
-            }
-        }
-        return transposedMatrix;
-    }
-
     /**--------------------INVERSION METHODS--------------------------------------------------*/
-
-    /**
-     * Sets the next pivot element, either through row swapping or through row division.
-     * @param i :: Row-and-column index of the next pivot element.
-     */
 
     /**
      *
@@ -307,8 +335,9 @@ public class Matrix {
         if (M != N) throw new IllegalArgumentException("Matrix not invertible!");
         Matrix augmentedMatrix = this.augmentWithIdentity();
 
-        return augmentedMatrix.gaussJordanEliminate();
+        return augmentedMatrix.gaussJordanEliminate(true);
     }
+
 
     public Matrix augmentWithIdentity()
     {
@@ -321,6 +350,7 @@ public class Matrix {
         {
             for (int j = 0; j < N; j++)
             {
+
                 augmentedMatrix.setElement(i, j, data[i][j]);
             }
             for (int j = N; j < N * 2; j++)
@@ -332,6 +362,85 @@ public class Matrix {
         return augmentedMatrix;
     }
 
+    /**--------------------DETERMINANT METHODS--------------------------------------------------*/
+
+    /**
+     * Finds the determinant of a square matrix.
+     * @return Determinant of matrix.
+     */
+    public double getDeterminant()
+    {
+        if (M != N) throw new IllegalArgumentException("Matrix not square!");
+        double determinant = 0;
+
+        if (M == 1) determinant = data[0][0];
+        if (M == 2) determinant = (data[0][0] * data[1][1]) - (data[0][1] * data[1][0]);
+        else
+        {
+            for (int i = 0; i < N; i++)
+            {
+                double minorMatrixDet = getMinorMatrix(i).getDeterminant();
+                double newVal = data[0][i] * minorMatrixDet;
+
+                if (i % 2 == 0)
+                {
+                    System.out.println("i: " + i +", adding " + newVal);
+                    determinant += data[0][i] * minorMatrixDet;
+                }
+                else
+                {
+                    System.out.println("i: " + i +", subtracting " + newVal);
+                    determinant -= data[0][i] * minorMatrixDet;
+                }
+            }
+        }
+        return determinant;
+    }
+
+    /**
+     * Gets the minor matrix of this matrix, with the top row and column i removed.
+     * @param i Index of column to remove.
+     * @return Minor matrix.
+     */
+    public Matrix getMinorMatrix(int i)
+    {
+        Matrix minorMatrix = new Matrix(M - 1, N - 1);
+        for (int j = 0; j < N; j++)
+        {
+            if (j != i)
+            {
+                for (int k = 1; k < M; k++) {
+                    if (j < i) minorMatrix.setElement(k - 1, j, data[k][j]);
+                    if (j > i) minorMatrix.setElement(k - 1, j - 1, data[k][j]);
+            }
+        }
+        }
+        return minorMatrix;
+    }
+
+    /**--------------------RANK METHODS--------------------------------------------------*/
+
+    public int getRank()
+    {
+        Matrix matrix = new Matrix(data);
+        Matrix reducedRowEchelonMatrix = matrix.gaussJordanEliminate(false);
+
+        int rank = 0;
+        for (int i = 0; i < M; i++)
+        {
+            for (int j = 0; j < N; j++)
+            {
+                if (reducedRowEchelonMatrix.data[i][j] != 0)
+                {
+                    rank++;
+                    break;
+                }
+            }
+        }
+        return rank;
+    }
+
+    /**--------------------------------------------------------------------------------------*/
     /**
      * Prints this matrix to the console.
      */

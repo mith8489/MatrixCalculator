@@ -1,6 +1,9 @@
 package sample;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 
 public class VisualMatrix extends GridPane {
@@ -40,12 +43,19 @@ public class VisualMatrix extends GridPane {
         for (int j = 0; j < N; j++)
         { for (int i = 0; i < M; i++)
         {
-            TextField textField = new TextField("0");
+            TextField textField = new TextField("");
             if (!isEditable)
             {
                 textField.setEditable(false);
                 textField.setMouseTransparent(true);
+                textField.setFocusTraversable(false);
             }
+            textField.setOnMouseClicked(new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent event) {
+                    textField.setText("");
+                }
+            });
             add(textField, j, i);
 
         }

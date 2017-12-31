@@ -6,6 +6,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import javax.imageio.ImageIO;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.util.logging.Logger;
+
 public class Main extends Application {
 
     private CalcGUI calcGUI;
@@ -22,12 +29,16 @@ public class Main extends Application {
         primaryStage.show();
     }
 
-
     public static void main(String[] args) {
 
-    //    double[][] matrixData = {{1,2,3}, {4,8,6}, {7,5,9}};
-    //    Matrix matrix = new Matrix(matrixData);
-    //    matrix.invert();
+       /* double[][] matrixData = {{2, 7, 0}, {3, 2, 0}, {12, 4, 7}, {0, 0, 0}};
+        Matrix matrix = new Matrix(matrixData);
+        System.out.println(matrix.getRank());
+
+        double[][] matrixData2 = {{5, 5, 5}, {6, 6, 7}, {8, 8, 8}};
+        Matrix matrix2 = new Matrix(matrixData2);
+        matrix.swap(matrix2);*/
+
 
         launch(args);
     }

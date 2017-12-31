@@ -42,7 +42,7 @@ public class GaussJordanWorkSpace extends WorkSpace {
     public void doOperation() {
         matrixA = createMatrix(matrixA, vMatrixA);
 
-        matrixC = matrixA.gaussJordanEliminate();
+        matrixC = matrixA.gaussJordanEliminate(true);
 
         vMatrixC = createVisualMatrix(matrixC, vMatrixC);
     }

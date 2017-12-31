@@ -1,12 +1,71 @@
 
-.button
+*
+{
+    -fx-base-background: #E0E8F7;
+    -fx-bar-colour: #4267B2;
+    -fx-button-colour: -fx-bar-colour;
+    -fx-button-hover-colour: #6287D2;
+    -fx-solve-button-colour: #EF7200;
+    -fx-solve-button-hover-colour: #FF8200;
+}
+
+
+.button, .combo-box
 {
     -fx-font-weight: 800;
+    -fx-text-fill: #FFF;
+    -fx-background-color: -fx-bar-colour;
+    -fx-border-radius: 0;
+    -fx-border-style: solid;
+    -fx-border-width: 2px;
+    -fx-border-color: #FFF;
+}
+
+.button:hover, .combo-box:hover
+{
+    -fx-background-color: -fx-button-hover-colour;
+}
+
+.button:hover
+{
+    -fx-translate-x: 1px;
+    -fx-translate-y: -1px;
+}
+
+.combo-box .arrow
+{
+    -fx-background-color: #FFF;
+}
+
+.combo-box > *
+{
+    -fx-background-color: -fx-button-colour;
+}
+
+.combo-box > *:hover
+{
+    -fx-background-color: -fx-button-hover-colour;
+}
+
+.combo-box .list-cell
+{
+    -fx-text-fill: #FFF;
+    -fx-background-color: -fx-button-colour;
+}
+
+.combo-box .list-cell:hover
+{
+    -fx-background-color: -fx-button-hover-colour;
+}
+
+.combo-box-popup .list-view
+{
+    -fx-background-color: -fx-bar-colour;
 }
 
 .calc-gui
 {
-    -fx-background-color: #57AAFF;
+    -fx-background-color: -fx-base-background;
 }
 
 .visual-matrix
@@ -65,6 +124,7 @@
 .dimension-control-field
 {
     -fx-border-width: 2px;
+    -fx-border-color: #000;
     -fx-max-width: 70px;
 }
 
@@ -77,6 +137,17 @@
 {
     -fx-translate-y: 48;
     -fx-font-size: 14px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #FFF;
+    -fx-background-color: -fx-bar-colour;
+    -fx-border-radius: 0;
+    -fx-border-style: solid;
+    -fx-border-width: 2px;
+    -fx-border-color: #000;
+}
+
+.control-button:hover{
+    -fx-translate-y: 47px;
 }
 
 .matrix-error-text
@@ -108,7 +179,7 @@
     -fx-min-width: 100%;
     -fx-pref-height: 20%;
     -fx-spacing: 25px;
-    -fx-background-color: #0F51E8;
+    -fx-background-color: -fx-bar-colour;
     -fx-alignment: center;
 }
 
@@ -125,8 +196,20 @@
     -fx-font-weight: 800;
 }
 
-.solve-button
+.bottom-bar-button
 {
     -fx-font-size: 24px;
     -fx-alignment: center;
+}
+
+.solve-button
+{
+    -fx-background-color: -fx-solve-button-colour;
+    -fx-font-size: 24px;
+    -fx-alignment: center;
+}
+
+.solve-button:hover
+{
+    -fx-background-color: -fx-solve-button-hover-colour;
 }

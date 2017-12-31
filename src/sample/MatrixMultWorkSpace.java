@@ -1,6 +1,9 @@
 package sample;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Group;
+import javafx.scene.control.Button;
 
 public class MatrixMultWorkSpace extends WorkSpace {
 
@@ -9,6 +12,7 @@ public class MatrixMultWorkSpace extends WorkSpace {
     {
         super(calcGUI);
         dimensionControls.getChildren().addAll(matrixAControls, matrixBControls, controlButton);
+        addSwapFunctionality();
         controlBox.getChildren().add(new Group(dimensionControls));
         showMatrices();
     }
@@ -50,5 +54,30 @@ public class MatrixMultWorkSpace extends WorkSpace {
                 calcGUI.toggleSolveButton(false);
             } catch (IllegalArgumentException iae) {}
         }
+    }
+
+    private void addSwapFunctionality()
+    {
+        Button swapButton = new Button("Swap");
+        swapButton.getStyleClass().add("control-button");
+        swapButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                matrixA = createMatrix(matrixA, vMatrixA);
+                matrixB = createMatrix(matrixB, vMatrixB);
+                matrixA.swap(matrixB);
+
+                vMatrixA = new VisualMatrix(matrixA.getM(), matrixA.getN(), true);
+                vMatrixB = new VisualMatrix(matrixB.getM(), matrixB.getN(), true);
+                vMatrixA = createVisualMatrix(matrixA, vMatrixA);
+                vMatrixB = createVisualMatrix(matrixB, vMatrixB);
+                vMatrixC = new VisualMatrix(vMatrixA.getM(), vMatrixB.getN(), false);
+
+                matrixBox.getChildren().clear();
+                matrixBox.getChildren().addAll(new Group(vMatrixA), operatorSymbol, new Group(vMatrixB), equalitySign, new Group(vMatrixC));
+            }
+        });
+
+        dimensionControls.getChildren().add(swapButton);
     }
 }
