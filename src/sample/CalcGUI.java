@@ -61,9 +61,9 @@ public class CalcGUI extends BorderPane {
         setTop(topBar);
     }
 
-    public void toggleSolveButton(boolean interactable)
+    public void toggleSolveButton(boolean isInteractable)
     {
-        solveButton.setDisable(!interactable);
+        solveButton.setDisable(!isInteractable);
     }
 
     private void makeBottomBar() {

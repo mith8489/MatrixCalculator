@@ -1,17 +1,9 @@
 package sample;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
+
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
-import javax.imageio.ImageIO;
-import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-import java.util.logging.Logger;
 
 public class Main extends Application {
 
@@ -31,15 +23,18 @@ public class Main extends Application {
 
     public static void main(String[] args) {
 
-       /* double[][] matrixData = {{2, 7, 0}, {3, 2, 0}, {12, 4, 7}, {0, 0, 0}};
-        Matrix matrix = new Matrix(matrixData);
-        System.out.println(matrix.getRank());
+        double[][] matrixData = {{1, 2}, {3, 4}};
+        Matrix matrix = new Matrix(3, 3);
+        matrix.addData(matrixData);
 
-        double[][] matrixData2 = {{5, 5, 5}, {6, 6, 7}, {8, 8, 8}};
-        Matrix matrix2 = new Matrix(matrixData2);
-        matrix.swap(matrix2);*/
+        Vector vector1 = new Vector(1.0, 2.0, 5.0);
+        Vector vector2 = new Vector(3.0, 4.0, 6.0);
+        Vector vector3 = new Vector(-1.0, -2.0, -3.0);
+        matrix = Matrix.buildFromVectors(vector1, vector2, vector3);
+        matrix.show();
+        Vector vector = matrix.extractVector(1);
+        vector.show();
 
-
-        launch(args);
+        //launch(args);
     }
 }

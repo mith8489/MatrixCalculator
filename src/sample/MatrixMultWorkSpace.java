@@ -73,6 +73,8 @@ public class MatrixMultWorkSpace extends WorkSpace {
                 vMatrixB = createVisualMatrix(matrixB, vMatrixB);
                 vMatrixC = new VisualMatrix(vMatrixA.getM(), vMatrixB.getN(), false);
 
+                checkCompatibility();
+
                 matrixBox.getChildren().clear();
                 matrixBox.getChildren().addAll(new Group(vMatrixA), operatorSymbol, new Group(vMatrixB), equalitySign, new Group(vMatrixC));
             }

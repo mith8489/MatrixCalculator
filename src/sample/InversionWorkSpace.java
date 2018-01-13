@@ -39,11 +39,11 @@ public class InversionWorkSpace extends WorkSpace{
     public void doOperation() {
         matrixA = createMatrix(matrixA, vMatrixA);
         clearMatrix(vMatrixC);
+        try {matrixBox.getChildren().remove(wrongRankText);}
+        catch (NullPointerException npe) {};
 
         if (matrixA.getRank() == matrixA.getM())
         {
-            try {matrixBox.getChildren().remove(wrongRankText);}
-            catch (NullPointerException npe) {};
             matrixC = matrixA.invert();
             vMatrixC = createVisualMatrix(matrixC, vMatrixC);
         }
