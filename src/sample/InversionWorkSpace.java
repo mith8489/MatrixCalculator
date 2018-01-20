@@ -4,7 +4,7 @@ import javafx.scene.Group;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 
-public class InversionWorkSpace extends WorkSpace{
+public class InversionWorkSpace extends MatrixWorkSpace {
 
     private Text wrongRankText;
 

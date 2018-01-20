@@ -14,7 +14,7 @@ import javafx.scene.text.Text;
 
 import java.text.DecimalFormat;
 
-public class WorkSpace extends VBox implements MatrixOperational {
+public class MatrixWorkSpace extends VBox implements MatrixOperational {
 
     protected DecimalFormat decimalFormat = new DecimalFormat("#.##");
 
@@ -47,7 +47,7 @@ public class WorkSpace extends VBox implements MatrixOperational {
 
     protected Text matrixErrorText;
 
-    public WorkSpace(CalcGUI calcGUI)
+    public MatrixWorkSpace(CalcGUI calcGUI)
     {
         this.calcGUI = calcGUI;
         matrixBox = new HBox();

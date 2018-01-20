@@ -3,7 +3,7 @@ package sample;
 import javafx.scene.Group;
 import javafx.scene.control.TextField;
 
-public class GaussJordanWorkSpace extends WorkSpace {
+public class GaussJordanWorkSpace extends MatrixWorkSpace {
 
     public GaussJordanWorkSpace(CalcGUI calcGUI)
     {

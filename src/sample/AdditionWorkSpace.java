@@ -1,12 +1,9 @@
 package sample;
 
-import javafx.beans.property.SimpleStringProperty;
 import javafx.scene.Group;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.GridPane;
 
 
-public class AdditionWorkSpace extends WorkSpace {
+public class AdditionWorkSpace extends MatrixWorkSpace {
 
     public AdditionWorkSpace(CalcGUI calcGUI)
     {

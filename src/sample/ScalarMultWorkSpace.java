@@ -3,7 +3,7 @@ package sample;
 import javafx.scene.Group;
 import javafx.scene.control.TextField;
 
-public class ScalarMultWorkSpace extends WorkSpace {
+public class ScalarMultWorkSpace extends MatrixWorkSpace {
 
 
     public ScalarMultWorkSpace(CalcGUI calcGUI)

@@ -7,7 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
-
+import javafx.scene.layout.VBox;
 
 
 public class CalcGUI extends BorderPane {
@@ -19,7 +19,8 @@ public class CalcGUI extends BorderPane {
     private HBox bottomBar;
     private Button solveButton;
 
-    private WorkSpace workSpace;
+    private MatrixWorkSpace matrixWorkSpace;
+    private TransformationWorkSpace transformationWorkSpace;
 
     public CalcGUI() {
         getStyleClass().add("calc-gui");
@@ -29,13 +30,22 @@ public class CalcGUI extends BorderPane {
     }
 
     private void makeWorkSpaces() {
-        workSpace = new AdditionWorkSpace(this);
+        matrixWorkSpace = new AdditionWorkSpace(this);
+        transformationWorkSpace = new TransformationWorkSpace(4);
 
-        setCenter(workSpace);
-        workSpace.setAlignment(Pos.CENTER);
+        setCenter(transformationWorkSpace);
+        matrixWorkSpace.setAlignment(Pos.CENTER);
     }
 
     private void makeTopBar() {
+
+        VBox workSpaceTypeSelector = new VBox();
+
+        Button matrixWorkSpaceButton = new Button("Matrix Operations");
+        Button transformationWorkSpaceButton = new Button("Transformations");
+        workSpaceTypeSelector.getChildren().addAll(matrixWorkSpaceButton, transformationWorkSpaceButton);
+
+
         ObservableList<String> operationTypes = FXCollections.observableArrayList(
                 "Addition",
                 "Subtraction",
@@ -61,6 +71,24 @@ public class CalcGUI extends BorderPane {
         setTop(topBar);
     }
 
+    private void setWorkSpaceType(boolean isMatrixWorkSpace)
+    {
+        if (isMatrixWorkSpace)
+        {
+            try { topBar.getChildren().addAll(operationSelector, selectOperationButton); }
+            catch (IllegalArgumentException iae) {}
+
+            setCenter(matrixWorkSpace);
+        }
+        else
+        {
+            try { topBar.getChildren().removeAll(operationSelector, selectOperationButton); }
+            catch (NullPointerException npe) {}
+
+            setCenter(transformationWorkSpace);
+        }
+    }
+
     public void toggleSolveButton(boolean isInteractable)
     {
         solveButton.setDisable(!isInteractable);
@@ -69,11 +97,11 @@ public class CalcGUI extends BorderPane {
     private void makeBottomBar() {
         Button clearButton = new Button("Clear");
         clearButton.getStyleClass().add("bottom-bar-button");
-        clearButton.setOnAction(event -> workSpace.clearMatrices());
+        clearButton.setOnAction(event -> matrixWorkSpace.clearMatrices());
 
         solveButton = new Button("Solve!");
         solveButton.getStyleClass().add("solve-button");
-        solveButton.setOnAction(event -> workSpace.doOperation());
+        solveButton.setOnAction(event -> matrixWorkSpace.doOperation());
 
         bottomBar = new HBox();
         bottomBar.getStyleClass().add("top-bottom-bar");
@@ -86,46 +114,46 @@ public class CalcGUI extends BorderPane {
         setCenter(null);
         switch (operationType) {
             case "Addition":
-                workSpace = new AdditionWorkSpace(this);
+                matrixWorkSpace = new AdditionWorkSpace(this);
                 break;
 
             case "Subtraction":
-                workSpace = new SubtractionWorkSpace(this);
+                matrixWorkSpace = new SubtractionWorkSpace(this);
                 break;
 
             case "Scalar Multiplication":
-                workSpace = new ScalarMultWorkSpace(this);
+                matrixWorkSpace = new ScalarMultWorkSpace(this);
                 break;
 
             case "Matrix Multiplication":
-                workSpace = new MatrixMultWorkSpace(this);
+                matrixWorkSpace = new MatrixMultWorkSpace(this);
                 break;
 
             case "Gauss-Jordan Elimination":
-                workSpace = new GaussJordanWorkSpace(this);
+                matrixWorkSpace = new GaussJordanWorkSpace(this);
                 break;
 
             case "Transposition":
-                workSpace = new TransposeWorkSpace(this);
+                matrixWorkSpace = new TransposeWorkSpace(this);
                 break;
 
             case "Inversion":
-                workSpace = new InversionWorkSpace(this);
+                matrixWorkSpace = new InversionWorkSpace(this);
                 break;
 
             case "Determinant":
-                workSpace = new DeterminantWorkSpace(this);
+                matrixWorkSpace = new DeterminantWorkSpace(this);
                 break;
 
             case "Matrix Rank":
-                workSpace = new RankWorkSpace(this);
+                matrixWorkSpace = new RankWorkSpace(this);
                 break;
 
             default:
-                workSpace = null;
+                matrixWorkSpace = null;
         }
-        setCenter(workSpace);
-        workSpace.setAlignment(Pos.CENTER);
+        setCenter(matrixWorkSpace);
+        matrixWorkSpace.setAlignment(Pos.CENTER);
         toggleSolveButton(true);
     }
 

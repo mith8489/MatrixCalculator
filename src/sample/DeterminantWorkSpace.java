@@ -3,7 +3,7 @@ package sample;
 import javafx.scene.Group;
 import javafx.scene.control.TextField;
 
-public class DeterminantWorkSpace extends WorkSpace {
+public class DeterminantWorkSpace extends MatrixWorkSpace {
 
     public DeterminantWorkSpace(CalcGUI calcGUI)
     {

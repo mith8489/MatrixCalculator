@@ -1,9 +1,8 @@
 package sample;
 
 import javafx.scene.Group;
-import javafx.scene.control.TextField;
 
-public class TransposeWorkSpace extends WorkSpace {
+public class TransposeWorkSpace extends MatrixWorkSpace {
 
     String yTranslateSymbolDistance;
 

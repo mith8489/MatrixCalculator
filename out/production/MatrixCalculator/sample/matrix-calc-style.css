@@ -213,3 +213,16 @@
 {
     -fx-background-color: -fx-solve-button-hover-colour;
 }
+
+.vector-number-label
+{
+    -fx-font-weight: 800;
+    -fx-font-size: 20;
+}
+
+.vector-field-label
+{
+    -fx-font-family: monospace;
+    -fx-font-weight: 800;
+    -fx-font-size: 18;
+}

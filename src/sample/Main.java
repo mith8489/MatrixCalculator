@@ -8,8 +8,8 @@ import javafx.stage.Stage;
 public class Main extends Application {
 
     private CalcGUI calcGUI;
-    private final int WINDOW_WIDTH = 1200;
-    private final int WINDOW_HEIGHT = 950;
+    private final int WINDOW_WIDTH = 1400;
+    private final int WINDOW_HEIGHT = 1000;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -27,14 +27,14 @@ public class Main extends Application {
         Matrix matrix = new Matrix(3, 3);
         matrix.addData(matrixData);
 
-        Vector vector1 = new Vector(1.0, 2.0, 5.0);
-        Vector vector2 = new Vector(3.0, 4.0, 6.0);
-        Vector vector3 = new Vector(-1.0, -2.0, -3.0);
+        Vector vector1 = new Vector(1.0, 2.0);
+        Vector vector2 = new Vector(1.0, 4.0);
+        Vector vector3 = new Vector(1.0, 6.0);
         matrix = Matrix.buildFromVectors(vector1, vector2, vector3);
         matrix.show();
         Vector vector = matrix.extractVector(1);
         vector.show();
 
-        //launch(args);
+        launch(args);
     }
 }

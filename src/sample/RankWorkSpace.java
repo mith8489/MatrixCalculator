@@ -3,7 +3,7 @@ package sample;
 import javafx.scene.Group;
 import javafx.scene.control.TextField;
 
-public class RankWorkSpace extends WorkSpace {
+public class RankWorkSpace extends MatrixWorkSpace {
 
     public RankWorkSpace(CalcGUI calcGUI)
     {

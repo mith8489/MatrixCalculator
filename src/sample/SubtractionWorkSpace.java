@@ -1,10 +1,9 @@
 package sample;
 
-import javafx.beans.property.SimpleStringProperty;
 import javafx.scene.Group;
 
 
-public class SubtractionWorkSpace extends WorkSpace {
+public class SubtractionWorkSpace extends MatrixWorkSpace {
 
     public SubtractionWorkSpace(CalcGUI calcGUI)
     {

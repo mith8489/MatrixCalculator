@@ -5,7 +5,7 @@ import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.control.Button;
 
-public class MatrixMultWorkSpace extends WorkSpace {
+public class MatrixMultWorkSpace extends MatrixWorkSpace {
 
 
     public MatrixMultWorkSpace(CalcGUI calcGUI)
