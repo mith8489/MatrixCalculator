@@ -9,7 +9,6 @@
     -fx-solve-button-hover-colour: #FF8200;
 }
 
-
 .button, .combo-box
 {
     -fx-font-weight: 800;
@@ -264,6 +263,30 @@
     -fx-max-width: 50px;
 }
 
+.transformation-menu
+{
+    -fx-padding: 20px 80px 20px 20px;
+    -fx-spacing: 20px;
+    -fx-alignment: center;
+}
+
+.transformation-hbox
+{
+    -fx-spacing: 20px;
+}
+
+.transformation-hbox .button
+{
+    -fx-min-width: 120px;
+    -fx-border-color: #000;
+}
+
+.transformation-hbox .text-field
+{
+    -fx-border-color: #000;
+    -fx-border-width: 2px;
+}
+
 .coordinate-grid
 {
     -fx-background-color: #FFF;
@@ -284,7 +307,7 @@
 
 .polygon
 {
-    -fx-stroke: #222288;
-    -fx-opacity: 0.2;
-    -fx-fill: blue;
+    -fx-stroke: rgba(5, 10, 66, 1);
+    -fx-stroke-width: 2px;
+    -fx-fill: rgba(5, 127, 178, 0.5);
 }

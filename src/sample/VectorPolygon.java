@@ -53,7 +53,6 @@ public class VectorPolygon {
 
     public void grahamScan(Vector[] vectors)
     {
-        System.out.println("NEW SCAN------------------------------\n");
         orderedVectors = new Vector[vectors.length];
 
         Vector bottomVector = findBottomVector();
@@ -65,30 +64,20 @@ public class VectorPolygon {
             currentVector = getNextVector(vectors, currentVector);
             orderedVectors[i] = currentVector;
         }
-        System.out.println("_____________________________");
-        for (Vector vector : orderedVectors)
-        {
-            System.out.println(vector.getX() + ", " + vector.getY());
-        }
     }
 
-    private Vector getNextVector(Vector[] vectors, Vector currentVector)
+    private Vector getNextVector(Vector[] vectors, Vector baseVector)
     {
         Vector nextVector = vectors[0];
         double currentLowestAngle = 2*Math.PI;
-        System.out.println("Lowest angle between ");
-        currentVector.show();
-        nextVector.show();
 
         for (Vector vector : vectors)
         {
-            double newAngle = currentVector.get2DAngle(vector);
-            if (newAngle < 0.0) newAngle += 2*Math.PI;
-            if (!vector.isEqualTo(currentVector))
+
+            if (!vector.isEqualTo(baseVector))
             {
-                System.out.println(vector.getX() + "," + vector.getY() + " : " + currentVector.getX() + "," + currentVector.getY());
-                System.out.println(newAngle + " : " + currentLowestAngle);
-                System.out.println("--------------");
+                double newAngle = baseVector.get2DAngle(vector);
+                if (newAngle < 0.0) newAngle += 2*Math.PI;
                 if (newAngle < currentLowestAngle)
                 {
                     currentLowestAngle = newAngle;

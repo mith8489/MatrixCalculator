@@ -23,16 +23,6 @@ public class Main extends Application {
 
     public static void main(String[] args) {
 
-        Vector v1 = new Vector(-5.0, -12.0);
-        Vector v2 = new Vector(2.0, 6.0);
-        Vector v3 = new Vector(-17.0, 22.0);
-        Vector v4 = new Vector(23.0, -7.0);
-        Vector[] vectors = {v1,v2,v3,v4};
-
-        System.out.println(v1.get2DAngle(v2));
-//        VectorPolygon vectorPolygon = new VectorPolygon(vectors, new Vector(0.0,0.0));
-
         launch(args);
-        System.out.println();
     }
 }

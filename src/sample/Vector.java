@@ -33,7 +33,7 @@ public class Vector extends Matrix {
         data[i][0] = val;
     }
 
-    private Matrix make2DMatrix(double x1, double x2, double y1, double y2)
+    public static Matrix make2DMatrix(double x1, double x2, double y1, double y2)
     {
         double[][] matrixData = {{x1, x2}, {y1, y2}};
 
@@ -102,19 +102,28 @@ public class Vector extends Matrix {
         if (transformationMatrix.getN() != transformationMatrix.getM()) throw new IllegalArgumentException("Transformation doesn't preserve vector dimensions!");
 
         Vector mappedVector = (Vector) transformationMatrix.matrixMult(this);
-        mappedVector.show();
         return mappedVector;
     }
 
     /**--------------------SCALING METHODS--------------------------------------------------*/
 
-    public Vector scale(int width, int height)
+    public Vector scale(double width, double height)
     {
         Matrix scalingMatrix = make2DMatrix(width, 0, 0, height);
         return transform(scalingMatrix);
     }
 
-    public Vector scaleProportional(int scalar)
+    public Vector scaleX(double scalar)
+    {
+        return scale(scalar, 1);
+    }
+
+    public Vector scaleY(double scalar)
+    {
+        return scale(1, scalar);
+    }
+
+    public Vector scaleProportional(double scalar)
     {
         return scale(scalar, scalar);
     }
@@ -123,19 +132,19 @@ public class Vector extends Matrix {
 
     public Vector reflect2DX()
     {
-        Matrix reflectionMatrix = make2DMatrix(1, 0, -1, 0);
+        Matrix reflectionMatrix = make2DMatrix(-1, 0, 0, 1);
         return transform(reflectionMatrix);
     }
 
     public Vector reflect2DY()
     {
-        Matrix reflectionMatrix = make2DMatrix(-1, 0, 1, 0);
+        Matrix reflectionMatrix = make2DMatrix(1, 0, 0, -1);
         return transform(reflectionMatrix);
     }
 
     public Vector reflect2DOrigin()
     {
-        Matrix reflectionMatrix = make2DMatrix(-1, 0, -1, 0);
+        Matrix reflectionMatrix = make2DMatrix(-1, 0, 0, -1);
         return transform(reflectionMatrix);
     }
 
@@ -161,17 +170,17 @@ public class Vector extends Matrix {
 
     /**--------------------SHEAR METHODS--------------------------------------------------*/
 
-    public Vector shear2DX(int scalar)
+    public Vector shear2DX(double scalar)
     {
         return shear(2, 0, 1, scalar);
     }
 
-    public Vector shear2DY(int scalar)
+    public Vector shear2DY(double scalar)
     {
         return shear(2, 1, 0, scalar);
     }
 
-    private Vector shear(int matrixDim, int i, int j, int scalar)
+    private Vector shear(int matrixDim, int i, int j, double scalar)
     {
         Matrix shearMatrix = Matrix.Identity(matrixDim);
         shearMatrix.setElement(i, j, scalar);

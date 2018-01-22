@@ -14,7 +14,7 @@ public class VectorInputBox extends HBox {
 
     private TransformationWorkSpace workSpace;
 
-    private HBox controlBox;
+    private HBox vectorValueBox;
     private String vectorNames = ".abcdefghijklmnopqrstuvwxyz";
 
     private LinkedList<TextField> xFields = new LinkedList<>();
@@ -33,7 +33,6 @@ public class VectorInputBox extends HBox {
     public int getNumOfPoints() {
         return numOfPoints;
     }
-
 
 
     public VectorInputBox(int numOfFields, TransformationWorkSpace workSpace)
@@ -57,6 +56,7 @@ public class VectorInputBox extends HBox {
         drawButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+                workSpace.getPointVectors();
                 workSpace.drawVectors();
 
             }
@@ -79,10 +79,10 @@ public class VectorInputBox extends HBox {
         labelBox.getStyleClass().add("vector-label-box");
         labelBox.getChildren().addAll(xLabel, yLabel);
 
-        controlBox = new HBox();
-        controlBox.getChildren().addAll(drawButton, addFieldButton, removeFieldButton, labelBox);
-        controlBox.getStyleClass().add("vector-control-box");
-        getChildren().add(controlBox);
+        vectorValueBox = new HBox();
+        vectorValueBox.getChildren().addAll(drawButton, addFieldButton, removeFieldButton, labelBox);
+        vectorValueBox.getStyleClass().add("vector-control-box");
+        getChildren().add(vectorValueBox);
     }
 
     private void addCoordField()
@@ -118,6 +118,5 @@ public class VectorInputBox extends HBox {
             numOfPoints--;
             getChildren().remove(getChildren().size() - 1);
         }
-
     }
 }

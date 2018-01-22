@@ -8,6 +8,7 @@ import javafx.scene.chart.ScatterChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 import javafx.scene.shape.Polygon;
@@ -75,7 +76,7 @@ public class CoordinateGrid extends Pane{
         Double yPos = yOrigin - yCoord * 10;
         Circle vector = new Circle(xPos, yPos, 2);
 
-        String coordString = "(" + xCoord + "," + yCoord + ")";
+        String coordString = "(" + Math.round(xCoord ) + "," + Math.round(yCoord ) + ")";
         Text coordText = new Text(xPos, yPos, coordString);
         getChildren().addAll(vector, coordText);
     }
