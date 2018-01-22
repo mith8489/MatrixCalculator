@@ -9,7 +9,7 @@ public class Main extends Application {
 
     private CalcGUI calcGUI;
     private final int WINDOW_WIDTH = 1400;
-    private final int WINDOW_HEIGHT = 1000;
+    private final int WINDOW_HEIGHT = 1200;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -23,18 +23,16 @@ public class Main extends Application {
 
     public static void main(String[] args) {
 
-        double[][] matrixData = {{1, 2}, {3, 4}};
-        Matrix matrix = new Matrix(3, 3);
-        matrix.addData(matrixData);
+        Vector v1 = new Vector(-5.0, -12.0);
+        Vector v2 = new Vector(2.0, 6.0);
+        Vector v3 = new Vector(-17.0, 22.0);
+        Vector v4 = new Vector(23.0, -7.0);
+        Vector[] vectors = {v1,v2,v3,v4};
 
-        Vector vector1 = new Vector(1.0, 2.0);
-        Vector vector2 = new Vector(1.0, 4.0);
-        Vector vector3 = new Vector(1.0, 6.0);
-        matrix = Matrix.buildFromVectors(vector1, vector2, vector3);
-        matrix.show();
-        Vector vector = matrix.extractVector(1);
-        vector.show();
+        System.out.println(v1.get2DAngle(v2));
+//        VectorPolygon vectorPolygon = new VectorPolygon(vectors, new Vector(0.0,0.0));
 
         launch(args);
+        System.out.println();
     }
 }

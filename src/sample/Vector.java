@@ -2,6 +2,11 @@ package sample;
 
 public class Vector extends Matrix {
 
+    public Double getX() { return getElement(0);};
+    public Double getY() { return getElement(1);};
+    public void setX(double value) { data[0][0] = value;}
+    public void setY(double value) { data[1][0] = value;}
+
     public Vector(int M)
     {
         super(M, 1);
@@ -35,6 +40,63 @@ public class Vector extends Matrix {
         return new Matrix(matrixData);
     }
 
+    public boolean isEqualTo(Vector v2)
+    {
+        Vector v1 = this;
+        for (int i = 0; i < data.length; i++)
+        {
+            if (!v1.getElement(i).equals(v2.getElement(i))) return false;
+        }
+        return true;
+    }
+
+    public double getMagnitude()
+    {
+        double magnitude = 0;
+        for (double[] val : data)
+        {
+            magnitude += Math.pow(val[0], 2);
+        }
+
+        return Math.sqrt(magnitude);
+    }
+
+    public double getDotProduct(Vector v2)
+    {
+        Vector v1 = this;
+        if (v1.getData().length != v2.getData().length) throw new IllegalArgumentException("Vectors not equal length!");
+
+        double dotProduct = 0;
+
+        for (int i = 0; i < v1.data.length; i++)
+        {
+            dotProduct += v1.getElement(i) * v2.getElement(i);
+        }
+
+        return dotProduct;
+    }
+
+    public double get2DAngle(Vector v2)
+    {
+        Vector v1 = this;
+        double dot = v1.getDotProduct(v2);;
+        double det = v1.concatenateVector(v2).getDeterminant();
+        return Math.atan2(det, dot);
+    }
+
+    public double getAngle(Vector v2)
+    {
+        Vector v1 = this;
+
+        double dotProduct = v1.getDotProduct(v2);
+        double v1Mag = v1.getMagnitude();
+        double v2Mag = v2.getMagnitude();
+
+
+        double angle = Math.acos(dotProduct / (v1Mag * v2Mag));
+        return angle;
+    }
+
     public Vector transform(Matrix transformationMatrix)
     {
         if (transformationMatrix.getN() != transformationMatrix.getM()) throw new IllegalArgumentException("Transformation doesn't preserve vector dimensions!");
@@ -59,19 +121,19 @@ public class Vector extends Matrix {
 
     /**--------------------REFLECTION METHODS--------------------------------------------------*/
 
-    public Vector reflectX()
+    public Vector reflect2DX()
     {
         Matrix reflectionMatrix = make2DMatrix(1, 0, -1, 0);
         return transform(reflectionMatrix);
     }
 
-    public Vector reflectY()
+    public Vector reflect2DY()
     {
         Matrix reflectionMatrix = make2DMatrix(-1, 0, 1, 0);
         return transform(reflectionMatrix);
     }
 
-    public Vector reflectOrigin()
+    public Vector reflect2DOrigin()
     {
         Matrix reflectionMatrix = make2DMatrix(-1, 0, -1, 0);
         return transform(reflectionMatrix);
@@ -115,5 +177,11 @@ public class Vector extends Matrix {
         shearMatrix.setElement(i, j, scalar);
 
         return transform(shearMatrix);
+    }
+
+    public void show()
+    {
+        System.out.println(getX() + ", " + getY());
+        System.out.println("________");
     }
 }

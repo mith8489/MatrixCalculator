@@ -31,7 +31,7 @@ public class CalcGUI extends BorderPane {
 
     private void makeWorkSpaces() {
         matrixWorkSpace = new AdditionWorkSpace(this);
-        transformationWorkSpace = new TransformationWorkSpace(4);
+        transformationWorkSpace = new TransformationWorkSpace(2);
 
         setCenter(transformationWorkSpace);
         matrixWorkSpace.setAlignment(Pos.CENTER);
