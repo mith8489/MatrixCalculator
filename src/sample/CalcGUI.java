@@ -7,16 +7,23 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
 
 
 public class CalcGUI extends BorderPane {
 
-    private HBox topBar;
-    private ComboBox operationSelector;
+    private BorderPane topBar;
+
+    private Button matrixWorkSpaceButton;
+    private Button transformationWorkSpaceButton;
+
+    private HBox operationSelector;
+    private ComboBox operationSelectorBox;
     private Button selectOperationButton;
 
     private HBox bottomBar;
+    private Button clearButton;
     private Button solveButton;
 
     private MatrixWorkSpace matrixWorkSpace;
@@ -24,16 +31,16 @@ public class CalcGUI extends BorderPane {
 
     public CalcGUI() {
         getStyleClass().add("calc-gui");
-        makeWorkSpaces();
         makeTopBar();
         makeBottomBar();
+        makeWorkSpaces();
     }
 
     private void makeWorkSpaces() {
         matrixWorkSpace = new AdditionWorkSpace(this);
         transformationWorkSpace = new TransformationWorkSpace(2);
 
-        setCenter(transformationWorkSpace);
+        setWorkSpaceType(true);
         matrixWorkSpace.setAlignment(Pos.CENTER);
     }
 
@@ -41,8 +48,14 @@ public class CalcGUI extends BorderPane {
 
         VBox workSpaceTypeSelector = new VBox();
 
-        Button matrixWorkSpaceButton = new Button("Matrix Operations");
-        Button transformationWorkSpaceButton = new Button("Transformations");
+        matrixWorkSpaceButton = new Button("Matrix Operations");
+        matrixWorkSpaceButton.setOnAction(event -> setWorkSpaceType(true));
+        matrixWorkSpaceButton.getStyleClass().add("workspace-selector-button");
+
+        transformationWorkSpaceButton = new Button("Transformations");
+        transformationWorkSpaceButton.setOnAction(event -> setWorkSpaceType(false));
+        transformationWorkSpaceButton.getStyleClass().add("workspace-selector-button");
+
         workSpaceTypeSelector.getChildren().addAll(matrixWorkSpaceButton, transformationWorkSpaceButton);
 
 
@@ -58,16 +71,25 @@ public class CalcGUI extends BorderPane {
                 "Matrix Rank"
         );
 
-        operationSelector = new ComboBox(operationTypes);
-        operationSelector.getSelectionModel().selectFirst();
+        operationSelectorBox = new ComboBox(operationTypes);
+        operationSelectorBox.getSelectionModel().selectFirst();
 
         selectOperationButton = new Button("Select");
-        selectOperationButton.setOnAction(event -> changeWorkSpace((String) operationSelector.getSelectionModel().getSelectedItem()));
+        selectOperationButton.setOnAction(event -> changeWorkSpace((String) operationSelectorBox.getSelectionModel().getSelectedItem()));
 
-        topBar = new HBox();
+        operationSelector = new HBox();
+        operationSelector.getChildren().addAll(operationSelectorBox, selectOperationButton);
+
+        Region counterRegion = new Region();
+        counterRegion.setMinWidth(250);
+
+        topBar = new BorderPane();
         topBar.getStyleClass().add("top-bottom-bar");
 
-        topBar.getChildren().addAll(operationSelector, selectOperationButton);
+        topBar.setLeft(workSpaceTypeSelector);
+        operationSelector.setAlignment(Pos.CENTER);
+        topBar.setCenter(operationSelector);
+        topBar.setRight(counterRegion);
         setTop(topBar);
     }
 
@@ -75,14 +97,24 @@ public class CalcGUI extends BorderPane {
     {
         if (isMatrixWorkSpace)
         {
-            try { topBar.getChildren().addAll(operationSelector, selectOperationButton); }
+            try {
+                topBar.setCenter(operationSelector);
+                bottomBar.getChildren().addAll(clearButton, solveButton);
+                matrixWorkSpaceButton.setStyle("-fx-background-color: #EF7200");
+                transformationWorkSpaceButton.setStyle("-fx-background-color: -fx-button-colour");
+            }
             catch (IllegalArgumentException iae) {}
 
             setCenter(matrixWorkSpace);
         }
         else
         {
-            try { topBar.getChildren().removeAll(operationSelector, selectOperationButton); }
+            try {
+                topBar.setCenter(null);
+                bottomBar.getChildren().clear();
+                transformationWorkSpaceButton.setStyle("-fx-background-color: #EF7200");
+                matrixWorkSpaceButton.setStyle("-fx-background-color: -fx-button-colour");
+                }
             catch (NullPointerException npe) {}
 
             setCenter(transformationWorkSpace);
@@ -95,7 +127,7 @@ public class CalcGUI extends BorderPane {
     }
 
     private void makeBottomBar() {
-        Button clearButton = new Button("Clear");
+        clearButton = new Button("Clear");
         clearButton.getStyleClass().add("bottom-bar-button");
         clearButton.setOnAction(event -> matrixWorkSpace.clearMatrices());
 

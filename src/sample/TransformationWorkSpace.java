@@ -199,7 +199,7 @@ public class TransformationWorkSpace extends BorderPane {
         double rad = degrees * (Math.PI / 180);
         for (int i = 0; i < points.length; i++)
         {
-            points[i] = points[i].rotate2D(rad, false);
+            points[i] = points[i].rotate2D(rad, true);
         }
         drawVectors();
     }
@@ -209,7 +209,7 @@ public class TransformationWorkSpace extends BorderPane {
         double rad = degrees * (Math.PI / 180);
         for (int i = 0; i < points.length; i++)
         {
-            points[i] = points[i].rotate2D(rad, true);
+            points[i] = points[i].rotate2D(rad, false);
         }
         drawVectors();
     }

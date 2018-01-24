@@ -150,13 +150,13 @@ public class Vector extends Matrix {
 
     /**--------------------ROTATION METHODS--------------------------------------------------*/
 
-    public Vector rotate2D(Double angle, boolean isCounterClockWise)
+    public Vector rotate2D(Double angle, boolean isClockWise)
     {
         if (M != 2) throw new IllegalArgumentException("Vector not member of R^2");
 
         Matrix rotationMatrix;
 
-        if (isCounterClockWise)
+        if (isClockWise)
         {
             rotationMatrix = make2DMatrix(Math.cos(angle), Math.sin(angle), -Math.sin(angle), Math.cos(angle));
         }

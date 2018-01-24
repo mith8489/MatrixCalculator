@@ -31,6 +31,25 @@
     -fx-translate-y: -1px;
 }
 
+.workspace-selector-button
+{
+    -fx-min-width: 250px;
+    -fx-min-height: 50px;
+    -fx-border-width: 0 2px 0 0;
+}
+
+.workspace-selector-button:hover
+{
+    -fx-translate-y: 0;
+    -fx-translate-x: 0;
+    -fx-background-color: -fx-button-hover-colour;
+}
+
+.workspace-selector-button-selected
+{
+
+}
+
 .combo-box .arrow
 {
     -fx-background-color: #FFF;
@@ -175,12 +194,17 @@
 
 .top-bottom-bar
 {
-    -fx-min-height: 100px;
+    -fx-min-height: 101px;
     -fx-min-width: 100%;
     -fx-pref-height: 20%;
     -fx-spacing: 25px;
     -fx-background-color: -fx-bar-colour;
     -fx-alignment: center;
+}
+
+.top-bottom-bar > hbox
+{
+
 }
 
 .top-bottom-bar > *
@@ -290,6 +314,8 @@
 .coordinate-grid
 {
     -fx-background-color: #FFF;
+    -fx-border-width: 2px;
+    -fx-border-color: #000;
 }
 
 .axis
