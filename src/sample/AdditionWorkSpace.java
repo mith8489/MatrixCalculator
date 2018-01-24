@@ -26,7 +26,7 @@ public class AdditionWorkSpace extends MatrixWorkSpace {
         matrixA = createMatrix(matrixA, vMatrixA);
         matrixB = createMatrix(matrixB, vMatrixB);
 
-        matrixC = matrixA.plus(matrixB);
+        matrixC = matrixA.add(matrixB);
 
         vMatrixC = createVisualMatrix(matrixC, vMatrixC);
     }

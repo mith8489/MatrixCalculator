@@ -1,6 +1,6 @@
 package sample;
 
-public interface MatrixOperational {
+public interface WorkSpaceOperational {
 
     public void doOperation();
     public void updateMatrixDimensions();

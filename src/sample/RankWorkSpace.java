@@ -29,7 +29,7 @@ public class RankWorkSpace extends MatrixWorkSpace {
         int rank = matrixA.getRank();
 
         TextField textField = (TextField) vMatrixC.getChildren().get(0);
-        textField.setText(decimalFormat.format(rank));
+        textField.setText(Integer.toString(rank));
     }
 
     @Override

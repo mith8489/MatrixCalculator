@@ -49,7 +49,7 @@ public class InversionWorkSpace extends MatrixWorkSpace {
         }
         else
         {
-            wrongRankText = new Text("Matrix rank < " + matrixA.getM() + ".\nMatrix not invertible.");
+            wrongRankText = new Text("DecimalMatrix rank < " + matrixA.getM() + ".\nDecimalMatrix not invertible.");
             wrongRankText.getStyleClass().add("matrix-error-text");
             matrixBox.getChildren().add(wrongRankText);
         }
@@ -79,7 +79,7 @@ public class InversionWorkSpace extends MatrixWorkSpace {
 
     protected void checkCompatibility(int newARows, int newACols)
     {
-        matrixErrorText.setText("Matrix not invertible!");
+        matrixErrorText.setText("DecimalMatrix not invertible!");
         if (newARows == newACols)
         {
             try {

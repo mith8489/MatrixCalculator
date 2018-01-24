@@ -25,13 +25,11 @@ public class Main extends Application {
 
     public static void main(String[] args) {
 
-        Fraction fractionA = new Fraction(15, 12);
-        Fraction fractionB = new Fraction(25, 5);
-        Fraction fractionC = Fraction.add(fractionB, fractionA);
-        Fraction fractionD = Fraction.subtract(fractionB, fractionA);
-        System.out.println(fractionC.toString());
-        System.out.println(fractionD.toString());
+        Fraction fractionA = new Fraction(4, 5);
+        Fraction fractionB = new Fraction(2, 6);
+        Fraction fractionC = new Fraction(-9, 2);
 
-     //   launch(args);
+        System.out.println(fractionA.divide(fractionB).toString());
+        launch(args);
     }
 }

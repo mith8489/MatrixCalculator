@@ -15,6 +15,7 @@ public class GaussJordanWorkSpace extends MatrixWorkSpace {
         vMatrixC = new VisualMatrix(3, 4, false);
         matrixAColField.setText("4");
 
+        vMatrixC.setLargeFields();
         augmentMatrices();
         showMatrices();
     }
@@ -27,7 +28,7 @@ public class GaussJordanWorkSpace extends MatrixWorkSpace {
             for (int i = 0; i < visualMatrix.getM(); i++)
             {
                 TextField textField = (TextField) getNodeByIndex(i, visualMatrix.getN() - 1, visualMatrix);
-                textField.setStyle("-fx-border-width: 1px 1px 1px 3px; -fx-border-color: #AAA #AAA #AAA black");
+                textField.setStyle("-fx-border-width: 1px 1px 1px 3px; -fx-border-color: #AAA #AAA #AAA black; -fx-min-width: 100px");
             }
         }
     }
@@ -45,6 +46,8 @@ public class GaussJordanWorkSpace extends MatrixWorkSpace {
         matrixC = matrixA.gaussJordanEliminate(true);
 
         vMatrixC = createVisualMatrix(matrixC, vMatrixC);
+        vMatrixC.setLargeFields();
+        augmentMatrices();
     }
 
     @Override
@@ -55,7 +58,7 @@ public class GaussJordanWorkSpace extends MatrixWorkSpace {
 
         vMatrixA = new VisualMatrix(newARows, newACols, true);
         vMatrixC = new VisualMatrix(newARows, newACols, false);
-
+        vMatrixC.setLargeFields();
         augmentMatrices();
 
         matrixBox.getChildren().clear();

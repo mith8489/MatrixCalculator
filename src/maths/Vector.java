@@ -1,6 +1,6 @@
-package sample;
+package maths;
 
-public class Vector extends Matrix {
+public class Vector extends DecimalMatrix {
 
     public Double getX() { return getElement(0);};
     public Double getY() { return getElement(1);};
@@ -33,11 +33,11 @@ public class Vector extends Matrix {
         data[i][0] = val;
     }
 
-    public static Matrix make2DMatrix(double x1, double x2, double y1, double y2)
+    public static DecimalMatrix make2DMatrix(double x1, double x2, double y1, double y2)
     {
         double[][] matrixData = {{x1, x2}, {y1, y2}};
 
-        return new Matrix(matrixData);
+        return new DecimalMatrix(matrixData);
     }
 
     public boolean isEqualTo(Vector v2)
@@ -97,7 +97,7 @@ public class Vector extends Matrix {
         return angle;
     }
 
-    public Vector transform(Matrix transformationMatrix)
+    public Vector transform(DecimalMatrix transformationMatrix)
     {
         if (transformationMatrix.getN() != transformationMatrix.getM()) throw new IllegalArgumentException("Transformation doesn't preserve vector dimensions!");
 
@@ -109,7 +109,7 @@ public class Vector extends Matrix {
 
     public Vector scale(double width, double height)
     {
-        Matrix scalingMatrix = make2DMatrix(width, 0, 0, height);
+        DecimalMatrix scalingMatrix = make2DMatrix(width, 0, 0, height);
         return transform(scalingMatrix);
     }
 
@@ -132,19 +132,19 @@ public class Vector extends Matrix {
 
     public Vector reflect2DX()
     {
-        Matrix reflectionMatrix = make2DMatrix(-1, 0, 0, 1);
+        DecimalMatrix reflectionMatrix = make2DMatrix(-1, 0, 0, 1);
         return transform(reflectionMatrix);
     }
 
     public Vector reflect2DY()
     {
-        Matrix reflectionMatrix = make2DMatrix(1, 0, 0, -1);
+        DecimalMatrix reflectionMatrix = make2DMatrix(1, 0, 0, -1);
         return transform(reflectionMatrix);
     }
 
     public Vector reflect2DOrigin()
     {
-        Matrix reflectionMatrix = make2DMatrix(-1, 0, 0, -1);
+        DecimalMatrix reflectionMatrix = make2DMatrix(-1, 0, 0, -1);
         return transform(reflectionMatrix);
     }
 
@@ -154,7 +154,7 @@ public class Vector extends Matrix {
     {
         if (M != 2) throw new IllegalArgumentException("Vector not member of R^2");
 
-        Matrix rotationMatrix;
+        DecimalMatrix rotationMatrix;
 
         if (isClockWise)
         {
@@ -182,7 +182,7 @@ public class Vector extends Matrix {
 
     private Vector shear(int matrixDim, int i, int j, double scalar)
     {
-        Matrix shearMatrix = Matrix.Identity(matrixDim);
+        DecimalMatrix shearMatrix = DecimalMatrix.Identity(matrixDim);
         shearMatrix.setElement(i, j, scalar);
 
         return transform(shearMatrix);

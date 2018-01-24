@@ -182,7 +182,7 @@ public class CalcGUI extends BorderPane {
                 break;
 
             default:
-                matrixWorkSpace = null;
+                throw new IllegalArgumentException("Workspace type not found");
         }
         setCenter(matrixWorkSpace);
         matrixWorkSpace.setAlignment(Pos.CENTER);

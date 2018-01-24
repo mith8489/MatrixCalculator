@@ -1,9 +1,6 @@
 package sample;
 
-import javafx.scene.shape.Polygon;
-
-import java.util.ArrayList;
-import java.util.LinkedList;
+import maths.Vector;
 
 public class VectorPolygon {
 

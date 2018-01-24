@@ -17,6 +17,20 @@ public class Fraction {
 
     /**--------------------CONSTRUCTORS----------------------------------------*/
 
+    public static Fraction fromString (String fractionString)
+    {
+        if (fractionString.contains("/"))
+        {
+            String[] splitString = fractionString.split("/");
+            return new Fraction(Integer.parseInt(splitString[0]), Integer.parseInt(splitString[1]));
+        }
+        else
+        {
+            return new Fraction((Integer.parseInt(fractionString)));
+        }
+
+    }
+
     public Fraction (int numerator, int denominator)
     {
         if (denominator == 0) throw new IllegalArgumentException("Division by 0 not defined!");
@@ -46,19 +60,26 @@ public class Fraction {
             numerator = BigInteger.valueOf(0);
             denominator = BigInteger.valueOf(1);
         }
+
         else if (denominator.compareTo(BigInteger.valueOf(0)) < 0)
         {
             numerator = numerator.negate();
             denominator = denominator.negate();
         }
+            BigInteger gcd = euclideanGCD(numerator, denominator);
+            this.numerator = numerator.divide(gcd);
+            this.denominator = denominator.divide(gcd);
+    }
 
-        BigInteger gcd = euclideanGCD(numerator, denominator);
-        this.numerator = numerator.divide(gcd);
-        this.denominator = denominator.divide(gcd);
+    public Fraction (int numerator)
+    {
+        this.numerator = BigInteger.valueOf(numerator);
+        this.denominator = BigInteger.valueOf(1);
     }
 
     private BigInteger euclideanGCD(BigInteger numerator, BigInteger denominator)
     {
+        if (numerator.equals(BigInteger.valueOf(0))) return BigInteger.valueOf(1);
         BigInteger a = numerator.abs();
         BigInteger b = denominator.abs();
 
@@ -80,36 +101,59 @@ public class Fraction {
 
     /**--------------------ARITHMETIC FUNCTIONS----------------------------------------*/
 
-    public static Fraction add(Fraction a, Fraction b)
+    public Fraction add(Fraction b)
     {
+        Fraction a = this;
         BigInteger newNumerator = a.getNumerator().multiply(b.getDenominator()).add(b.getNumerator().multiply(a.getDenominator()));
         BigInteger newDenominator = a.getDenominator().multiply(b.getDenominator());
 
         return new Fraction(newNumerator, newDenominator);
     }
 
-    public static Fraction subtract(Fraction a, Fraction b)
+    public Fraction subtract(Fraction b)
     {
+        Fraction a = this;
         BigInteger newNumerator = a.getNumerator().multiply(b.getDenominator()).subtract(b.getNumerator().multiply(a.getDenominator()));
         BigInteger newDenominator = a.getDenominator().multiply(b.getDenominator());
 
         return new Fraction(newNumerator, newDenominator);
     }
 
-    public static Fraction multiply(Fraction a, Fraction b)
+    public Fraction multiply(Fraction b)
     {
+        Fraction a = this;
         BigInteger newNumerator = a.getNumerator().multiply(b.getNumerator());
         BigInteger newDenominator = a.getDenominator().multiply(b.getDenominator());
-
-        return new Fraction(newNumerator, newDenominator);
+        Fraction newFraction = new Fraction(newNumerator, newDenominator);
+        return newFraction;
     }
 
-    public static Fraction divide(Fraction a, Fraction b)
+    public Fraction divide(Fraction b)
     {
-        BigInteger newNumerator = a.getNumerator().divide(b.getNumerator());
-        BigInteger newDenominator = a.getDenominator().divide(b.getDenominator());
+        Fraction a = this;
+        Fraction reverseFraction = new Fraction(b.getDenominator(), b.getNumerator());
+        Fraction newFraction = a.multiply(reverseFraction);
+        return newFraction;
+    }
 
-        return new Fraction(newNumerator, newDenominator);
+    public Fraction square()
+    {
+        return this.multiply(this);
+    }
+
+    public Fraction negate()
+    {
+        return new Fraction(numerator.negate(), denominator);
+    }
+
+    public boolean equalsOne()
+    {
+        return (numerator.divide(denominator).equals(BigInteger.valueOf(1)));
+    }
+
+    public boolean equalsZero()
+    {
+        return numerator.equals(BigInteger.valueOf(0));
     }
 
     @Override

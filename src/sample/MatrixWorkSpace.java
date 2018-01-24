@@ -1,6 +1,5 @@
 package sample;
 
-import javafx.beans.property.StringProperty;
 import javafx.collections.ObservableList;
 import javafx.scene.Group;
 import javafx.scene.Node;
@@ -11,21 +10,24 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
+import maths.DecimalMatrix;
+import maths.Fraction;
+import maths.FractionMatrix;
 
 import java.text.DecimalFormat;
 
-public class MatrixWorkSpace extends VBox implements MatrixOperational {
+public class MatrixWorkSpace extends VBox implements WorkSpaceOperational {
 
-    protected DecimalFormat decimalFormat = new DecimalFormat("#.##");
+//    protected DecimalFormat decimalFormat = new DecimalFormat("#.##");
 
     protected CalcGUI calcGUI;
 
     protected HBox matrixBox;
     protected HBox controlBox;
 
-    protected Matrix matrixA; // First matrix
-    protected Matrix matrixB; // Second matrix (if necessary)
-    protected Matrix matrixC; //Solution matrix
+    protected FractionMatrix matrixA; // First matrix
+    protected FractionMatrix matrixB; // Second matrix (if necessary)
+    protected FractionMatrix matrixC; //Solution matrix
 
     protected VisualMatrix vMatrixA; // First visual matrix
     protected VisualMatrix vMatrixB; // Second visual matrix (if necessary)
@@ -172,28 +174,29 @@ public class MatrixWorkSpace extends VBox implements MatrixOperational {
         }
     }
 
-    protected Matrix createMatrix(Matrix matrix, VisualMatrix vMatrix)
+    protected FractionMatrix createMatrix(FractionMatrix matrix, VisualMatrix vMatrix)
     {
-        matrix = new Matrix(vMatrix.getM(), vMatrix.getN());
+        matrix = new FractionMatrix(vMatrix.getM(), vMatrix.getN());
         for (int i = 0; i < matrix.getM(); i++)
         { for (int j = 0; j < matrix.getN(); j++)
         {
             TextField textField = (TextField) getNodeByIndex(i, j, vMatrix);
             String text = textField.getText();
             if (text.equals("")) text = "0";
-            matrix.setElement(i, j, Double.parseDouble(text));
+
+            matrix.setElement(i, j, Fraction.fromString(text));
         }
         }
         return matrix;
     }
 
-    protected VisualMatrix createVisualMatrix(Matrix matrix, VisualMatrix vMatrix)
+    protected VisualMatrix createVisualMatrix(FractionMatrix matrix, VisualMatrix vMatrix)
     {
         for (int i = 0; i < matrix.getM(); i++)
         { for (int j = 0; j < matrix.getN(); j++)
         {
             Node textField = getNodeByIndex(i, j, vMatrix);
-            String text = decimalFormat.format(matrix.getElement(i, j));
+            String text = (matrix.getElement(i, j).toString());
             if (text.equals("-0")) text = "0";
             ((TextField) textField).setText(text);
         }

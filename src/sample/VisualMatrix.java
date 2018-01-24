@@ -2,6 +2,7 @@ package sample;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.scene.Node;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
@@ -59,6 +60,14 @@ public class VisualMatrix extends GridPane {
             add(textField, j, i);
 
         }
+        }
+    }
+
+    public void setLargeFields()
+    {
+        for (Node field : getChildren())
+        {
+            field.setStyle("-fx-min-width: 100px");
         }
     }
 }

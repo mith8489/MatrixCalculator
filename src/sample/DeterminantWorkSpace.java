@@ -2,6 +2,7 @@ package sample;
 
 import javafx.scene.Group;
 import javafx.scene.control.TextField;
+import maths.Fraction;
 
 public class DeterminantWorkSpace extends MatrixWorkSpace {
 
@@ -26,10 +27,10 @@ public class DeterminantWorkSpace extends MatrixWorkSpace {
     public void doOperation() {
         matrixA = createMatrix(matrixA, vMatrixA);
 
-        double determinant = matrixA.getDeterminant();
+        Fraction determinant = matrixA.getDeterminant();
 
         TextField textField = (TextField) vMatrixC.getChildren().get(0);
-        textField.setText(decimalFormat.format(determinant));
+        textField.setText(determinant.toString());
     }
 
     @Override
@@ -49,7 +50,7 @@ public class DeterminantWorkSpace extends MatrixWorkSpace {
 
     protected void checkCompatibility(int newARows, int newACols)
     {
-        matrixErrorText.setText("Matrix not square!");
+        matrixErrorText.setText("DecimalMatrix not square!");
         if (newARows == newACols)
         {
             try {

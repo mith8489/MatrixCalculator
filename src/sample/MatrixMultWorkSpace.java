@@ -11,6 +11,7 @@ public class MatrixMultWorkSpace extends MatrixWorkSpace {
     public MatrixMultWorkSpace(CalcGUI calcGUI)
     {
         super(calcGUI);
+        vMatrixC.setLargeFields();
         dimensionControls.getChildren().addAll(matrixAControls, matrixBControls, controlButton);
         addSwapFunctionality();
         controlBox.getChildren().add(new Group(dimensionControls));
@@ -33,6 +34,7 @@ public class MatrixMultWorkSpace extends MatrixWorkSpace {
         matrixC = matrixA.matrixMult(matrixB);
 
         vMatrixC = createVisualMatrix(matrixC, vMatrixC);
+        vMatrixC.setLargeFields();
     }
 
     @Override
@@ -46,6 +48,7 @@ public class MatrixMultWorkSpace extends MatrixWorkSpace {
 
             calcGUI.toggleSolveButton(true);
             vMatrixC = new VisualMatrix(vMatrixA.getM(), vMatrixB.getN(), false);
+            vMatrixC.setLargeFields();
         }
         else
         {
@@ -72,6 +75,7 @@ public class MatrixMultWorkSpace extends MatrixWorkSpace {
                 vMatrixA = createVisualMatrix(matrixA, vMatrixA);
                 vMatrixB = createVisualMatrix(matrixB, vMatrixB);
                 vMatrixC = new VisualMatrix(vMatrixA.getM(), vMatrixB.getN(), false);
+                vMatrixC.setLargeFields();
 
                 checkCompatibility();
 

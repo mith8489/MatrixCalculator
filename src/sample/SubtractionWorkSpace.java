@@ -27,7 +27,7 @@ public class SubtractionWorkSpace extends MatrixWorkSpace {
         matrixA = createMatrix(matrixA, vMatrixA);
         matrixB = createMatrix(matrixB, vMatrixB);
 
-        matrixC = matrixA.minus(matrixB);
+        matrixC = matrixA.subtract(matrixB);
 
         vMatrixC = createVisualMatrix(matrixC, vMatrixC);
     }
