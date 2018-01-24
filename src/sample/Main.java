@@ -5,6 +5,8 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import maths.Fraction;
+
 public class Main extends Application {
 
     private CalcGUI calcGUI;
@@ -23,6 +25,13 @@ public class Main extends Application {
 
     public static void main(String[] args) {
 
-        launch(args);
+        Fraction fractionA = new Fraction(15, 12);
+        Fraction fractionB = new Fraction(25, 5);
+        Fraction fractionC = Fraction.add(fractionB, fractionA);
+        Fraction fractionD = Fraction.subtract(fractionB, fractionA);
+        System.out.println(fractionC.toString());
+        System.out.println(fractionD.toString());
+
+     //   launch(args);
     }
 }

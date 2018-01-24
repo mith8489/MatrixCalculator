@@ -1,18 +1,10 @@
 package sample;
 
-import javafx.collections.ObservableList;
-import javafx.scene.Node;
-import javafx.scene.chart.LineChart;
-import javafx.scene.chart.NumberAxis;
-import javafx.scene.chart.ScatterChart;
-import javafx.scene.chart.XYChart;
-import javafx.scene.layout.HBox;
+
 import javafx.scene.layout.Pane;
-import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 import javafx.scene.shape.Polygon;
-import javafx.scene.shape.Polyline;
 import javafx.scene.text.Text;
 
 public class CoordinateGrid extends Pane{

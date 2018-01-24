@@ -43,6 +43,7 @@ public class VectorPolygon {
     {
         Vector bottomVector = vectors[0];
 
+        System.out.println(vectors.length);
         for (Vector vector : vectors)
         {
             if (vector.getY() < bottomVector.getY()) bottomVector = vector;
