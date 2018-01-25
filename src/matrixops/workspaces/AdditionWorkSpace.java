@@ -15,7 +15,7 @@ public class AdditionWorkSpace extends MatrixWorkSpace {
      * Creates a new AdditionWorkSpace bound to a given CalcGUI.
      * @param calcGUI Graphical User Interface in which the workspace is placed.
      */
-    AdditionWorkSpace(CalcGUI calcGUI)
+    public AdditionWorkSpace(CalcGUI calcGUI)
     {
         super(calcGUI);
         dimensionControls.getChildren().addAll(matrixAControls, matrixBControls, controlButton);

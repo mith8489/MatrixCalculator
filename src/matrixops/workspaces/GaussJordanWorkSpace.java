@@ -18,7 +18,7 @@ public class GaussJordanWorkSpace extends MatrixWorkSpace {
      *
      * @param calcGUI Graphical User Interface in which the workspace is placed.
      */
-    GaussJordanWorkSpace(CalcGUI calcGUI)
+    public GaussJordanWorkSpace(CalcGUI calcGUI)
     {
         super(calcGUI);
         dimensionControls.getChildren().addAll(matrixAControls, controlButton);

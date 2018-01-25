@@ -21,7 +21,7 @@ public class InversionWorkSpace extends MatrixWorkSpace {
      *
      * @param calcGUI Graphical User Interface in which the workspace is placed.
      */
-    InversionWorkSpace(CalcGUI calcGUI)
+    public InversionWorkSpace(CalcGUI calcGUI)
     {
         super(calcGUI);
         dimensionControls.getChildren().addAll(matrixAControls, controlButton);

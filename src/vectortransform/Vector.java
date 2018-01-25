@@ -92,9 +92,9 @@ public class Vector extends DecimalMatrix {
 
     /**
      * Creates a unique hashcode for this Vector.
-     * The condition (a.equals(b) => a.hashCode() == b.hashCode()) must be fulfilled.
+     * The condition (a.equals(b) implies a.hashCode() == b.hashCode()) must be fulfilled.
      *
-     * * @return The hashcode for this Vector object.
+     * @return The hashcode for this Vector object.
      */
     public int hashCode()
     {
@@ -217,6 +217,7 @@ public class Vector extends DecimalMatrix {
     /**
      * Scales the x value of this Vector up by the received scalar.
      *
+     * @param scalar The scalar by which to scale the Vector.
      * @return This Vector, scaled along the x axis by the given scalar.
      */
     public Vector scaleX(double scalar)
@@ -227,6 +228,7 @@ public class Vector extends DecimalMatrix {
     /**
      * Scales the y value of this Vector up by the received scalar.
      *
+     * @param scalar The scalar by which to scale the Vector.
      * @return This Vector, scaled along the y axis by the given scalar.
      */
     public Vector scaleY(double scalar)
@@ -237,6 +239,7 @@ public class Vector extends DecimalMatrix {
     /**
      * Scales the y and x values of this Vector up by the received scalar.
      *
+     * @param scalar The scalar by which to scale the Vector.
      * @return This Vector, scaled along both axes by the given scalar.
      */
     public Vector scaleProportional(double scalar)

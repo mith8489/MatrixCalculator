@@ -16,7 +16,7 @@ public class RankWorkSpace extends MatrixWorkSpace {
      * Creates a new RankWorkSpace bound to a given CalcGUI.
      * @param calcGUI Graphical User Interface in which the workspace is placed.
      */
-    RankWorkSpace(CalcGUI calcGUI)
+    public RankWorkSpace(CalcGUI calcGUI)
     {
         super(calcGUI);
         dimensionControls.getChildren().addAll(matrixAControls, controlButton);

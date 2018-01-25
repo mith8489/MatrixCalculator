@@ -34,8 +34,8 @@ public class FractionMatrix {
     /**
      * Creates an empty FractionMatrix of given dimensions.
      *
-     * @param M :: Number of rows.
-     * @param N :: Number of columns.
+     * @param M Number of rows.
+     * @param N Number of columns.
      */
     public FractionMatrix(int M, int N) {
         this.M = M;
@@ -60,8 +60,8 @@ public class FractionMatrix {
     /**
      * Creates an identity matrix.
      *
-     * @param n :: Rows and columns of the identity matrix.
-     * @return n-Identity matrix.
+     * @param n Rows and columns of the identity matrix.
+     * @return n-dimensional Identity matrix.
      */
     private static FractionMatrix Identity(int n) {
         FractionMatrix identityMatrix = new FractionMatrix(n, n);
@@ -82,8 +82,8 @@ public class FractionMatrix {
     /**
      * Swaps two rows in a matrix.
      *
-     * @param i :: First row to be swapped.
-     * @param j :: Second row to be swapped.
+     * @param i First row to be swapped.
+     * @param j Second row to be swapped.
      */
     private void swapRows(int i, int j) {
         Fraction[] temp = data[i];
@@ -121,7 +121,7 @@ public class FractionMatrix {
     /**
      * Adds another matrix to this matrix.
      *
-     * @param B :: The matrix to be added to this one.
+     * @param B The matrix to be added to this one.
      * @return Resultant matrix of addition.
      */
     public FractionMatrix add(FractionMatrix B) {
@@ -144,7 +144,7 @@ public class FractionMatrix {
     /**
      * Subtracts another matrix from this matrix.
      *
-     * @param B :: The matrix to be subtracted from this one.
+     * @param B The matrix to be subtracted from this one.
      * @return Resultant matrix of subtraction.
      */
     public FractionMatrix subtract(FractionMatrix B) {
@@ -167,7 +167,7 @@ public class FractionMatrix {
     /**
      * Performs scalar multiplication on this matrix (all elements multiplied individually by scalar).
      *
-     * @param scalar :: Scalar by which to multiply.
+     * @param scalar Scalar by which to multiply.
      * @return Resultant matrix of scalar multiplication.
      */
     public FractionMatrix scalarMult(int scalar) {
@@ -244,7 +244,7 @@ public class FractionMatrix {
     /**
      * Sets the next pivot element, either through row swapping or through row division.
      *
-     * @param i :: Row-and-column index of the next pivot element.
+     * @param i Row-and-column index of the next pivot element.
      */
     private void setPivotElement(int i) {
         if (!(data[i][i].equalsOne())) {
@@ -274,7 +274,8 @@ public class FractionMatrix {
     /**
      * Performs a Gauss-Jordan elimination on an augmented matrix.
      *
-     * @return :: Reduced row echelon form of the given matrix.
+     * @param isAugmented Indicates whether this FractionMatrix is augmented.
+     * @return Reduced row echelon form of the given matrix.
      */
     public FractionMatrix gaussJordanEliminate(boolean isAugmented) {
         if (isZeroMatrix()) return this;
@@ -383,6 +384,7 @@ public class FractionMatrix {
     /**
      * Gets the rank of this matrix.
      *
+     * @return The rank of this matrix.
      */
     public int getRank() {
         FractionMatrix matrix = new FractionMatrix(data);

@@ -17,7 +17,7 @@ public class ScalarMultWorkSpace extends MatrixWorkSpace {
      * Creates a new ScalarMultWorkSpace bound to a given CalcGUI.
      * @param calcGUI Graphical User Interface in which the workspace is placed.
      */
-    ScalarMultWorkSpace(CalcGUI calcGUI)
+    public ScalarMultWorkSpace(CalcGUI calcGUI)
     {
         super(calcGUI);
         vMatrixB = new VisualMatrix(1, 1, true);

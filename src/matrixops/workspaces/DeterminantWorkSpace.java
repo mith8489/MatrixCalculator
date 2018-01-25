@@ -17,7 +17,7 @@ public class DeterminantWorkSpace extends MatrixWorkSpace {
      * Creates a new DeterminantWorkSpace bound to a given CalcGUI.
      * @param calcGUI Graphical User Interface in which the workspace is placed.
      */
-    DeterminantWorkSpace(CalcGUI calcGUI)
+    public DeterminantWorkSpace(CalcGUI calcGUI)
     {
         super(calcGUI);
         dimensionControls.getChildren().addAll(matrixAControls, controlButton);

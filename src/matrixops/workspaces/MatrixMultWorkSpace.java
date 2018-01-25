@@ -17,7 +17,7 @@ public class MatrixMultWorkSpace extends MatrixWorkSpace {
      * Creates a new MatrixMultWorkSpace bound to a given CalcGUI.
      * @param calcGUI Graphical User Interface in which the workspace is placed.
      */
-    MatrixMultWorkSpace(CalcGUI calcGUI)
+    public MatrixMultWorkSpace(CalcGUI calcGUI)
     {
         super(calcGUI);
         vMatrixC.setLargeFields();

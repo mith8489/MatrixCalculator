@@ -14,7 +14,7 @@ public class SubtractionWorkSpace extends MatrixWorkSpace {
      * Creates a new SubtractionWorkSpace bound to a given CalcGUI.
      * @param calcGUI Graphical User Interface in which the workspace is placed.
      */
-    SubtractionWorkSpace(CalcGUI calcGUI)
+    public SubtractionWorkSpace(CalcGUI calcGUI)
     {
         super(calcGUI);
         dimensionControls.getChildren().addAll(matrixAControls, matrixBControls, controlButton);

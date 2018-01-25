@@ -15,7 +15,7 @@ public class TransposeWorkSpace extends MatrixWorkSpace {
      * Creates a new TransposeWorkSpace bound to a given CalcGUI.
      * @param calcGUI Graphical User Interface in which the workspace is placed.
      */
-    TransposeWorkSpace(CalcGUI calcGUI)
+    public TransposeWorkSpace(CalcGUI calcGUI)
     {
         super(calcGUI);
         dimensionControls.getChildren().addAll(matrixAControls, controlButton);
