@@ -1,0 +1,108 @@
+.visual-matrix
+{
+    -fx-alignment: center;
+    -fx-translate-y: 0px;
+    -fx-border-color: black;
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-border-style: solid;
+}
+
+.visual-matrix > *
+{
+    -fx-max-width: 60px;
+    -fx-border-color: black;
+    -fx-border-width: 2px 2px 0 0;
+    -fx-border-style: solid;
+    -fx-hgap: 0;
+    -fx-vgap: 0;
+    -fx-focus-color: -fx-control-inner-background ;
+    -fx-faint-focus-color: -fx-control-inner-background ;
+}
+
+.text-field
+{
+    -fx-max-width: 60px;
+    -fx-border-color: #CCC;
+    -fx-border-width: 1px 1px 1px 1px;
+    -fx-border-style: solid;
+    -fx-hgap: 0;
+    -fx-vgap: 0;
+    -fx-focus-color: -fx-control-inner-background ;
+    -fx-faint-focus-color: -fx-control-inner-background ;
+}
+
+.visual-matrix > *:focused
+{
+    -fx-background-color: #FFFFFF, #FFFFFF,#FFFFFF;
+    -fx-background-insets: 0, 0, 0;
+    -fx-background-radius: 0, 0, 0;
+}
+
+.operator-symbol
+{
+    -fx-font-size: 30px;
+    -fx-font-family: monospace;
+    -fx-font-weight: 800;
+}
+
+.dimension-controls
+{
+    -fx-padding: 10px;
+    -fx-spacing: 20px;
+    -fx-min-height: 50px;
+    -fx-max-height: 150px;
+    -fx-alignment: bottom-center;
+}
+
+.dimension-controls > * > *
+{
+    -fx-hgap: 10px;
+    -fx-vgap: 5px;
+}
+
+.dimension-control-field
+{
+    -fx-border-width: 2px;
+    -fx-border-color: #000;
+    -fx-max-width: 70px;
+}
+
+.dimension-control-matrix-label
+{
+    -fx-font-weight: 800;
+    -fx-font-size: 18px;
+}
+
+.control-button
+{
+    -fx-translate-y: 0;
+    -fx-font-size: 14px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #FFF;
+    -fx-background-color: -fx-bar-colour;
+    -fx-border-radius: 0;
+    -fx-border-style: solid;
+    -fx-border-width: 2px;
+    -fx-border-color: #000;
+}
+
+.matrix-error-text
+{
+    -fx-font-size: 24px;
+    -fx-font-weight: 800;
+    -fx-fill: red;
+    -fx-translate-y: 20px;
+}
+
+.work-space
+{
+    -fx-spacing: 0px;
+}
+
+.work-space > *
+{
+    -fx-alignment: center;
+    -fx-min-height: 200px;
+    -fx-translate-y: -100;
+    -fx-spacing: 25px;
+}

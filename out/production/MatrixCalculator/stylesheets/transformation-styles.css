@@ -1,0 +1,109 @@
+
+.vector-input-box
+{
+    -fx-padding: 10px;
+    -fx-spacing: 20px;
+    -fx-min-height: 50px;
+    -fx-max-height: 150px;
+    -fx-alignment: bottom-left;
+}
+
+.vector-number-label
+{
+    -fx-font-weight: 800;
+    -fx-font-size: 20;
+}
+
+.vector-label-box
+{
+    -fx-translate-x: 15px;
+    -fx-translate-y: -14px;
+}
+
+.vector-field-label
+{
+    -fx-font-family: monospace;
+    -fx-font-weight: 800;
+    -fx-font-size: 30;
+}
+
+.vector-coord-box
+{
+    -fx-alignment: center;
+    -fx-translate-y: 20px;
+    -fx-spacing: 5px;
+}
+
+.vector-control-box
+{
+    -fx-spacing: 10px;
+    -fx-translate-y: 70px;
+}
+
+.vector-control-button
+{
+    -fx-font-size: 14px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #FFF;
+    -fx-background-color: -fx-bar-colour;
+    -fx-border-radius: 0;
+    -fx-border-style: solid;
+    -fx-border-width: 2px;
+    -fx-border-color: #000;
+}
+
+.vector-text-field
+{
+    -fx-max-width: 50px;
+}
+
+.transformation-menu
+{
+    -fx-padding: 20px 80px 20px 20px;
+    -fx-spacing: 20px;
+    -fx-alignment: center;
+}
+
+.transformation-hbox
+{
+    -fx-spacing: 20px;
+}
+
+.transformation-hbox .button
+{
+    -fx-min-width: 120px;
+    -fx-border-color: #000;
+}
+
+.transformation-hbox .text-field
+{
+    -fx-border-color: #000;
+    -fx-border-width: 2px;
+}
+
+.coordinate-grid
+{
+    -fx-background-color: #FFF;
+    -fx-border-width: 2px;
+    -fx-border-color: #000;
+}
+
+.axis
+{
+    -fx-stroke: #000;
+    -fx-stroke-width: 2;
+    -fx-font-size: 24px;
+}
+
+.line
+{
+    -fx-stroke: #E6E6E6;
+    -fx-stroke-width: 1px;
+}
+
+.polygon
+{
+    -fx-stroke: rgba(5, 10, 66, 1);
+    -fx-stroke-width: 2px;
+    -fx-fill: rgba(5, 127, 178, 0.5);
+}

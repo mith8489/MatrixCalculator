@@ -1,50 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="MatrixCalculator" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/maths/FractionMatrix.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/maths/Matrix.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/maths/MatrixOperational.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/MatrixCalculator.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/base/WorkSpaceType.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/matrixops/workspaces/MatrixMultWorkSpace.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/stylesheets/base-styles.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/stylesheets/matrix-workspace-styles.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/stylesheets/top-bottom-bar-styles.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/stylesheets/transformation-styles.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/vectortransform/Vector.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatrixCalculator/maths/Fraction.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/AdditionWorkSpace.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/MatrixCalculator/maths/DecimalMatrix.class" afterPath="$PROJECT_DIR$/out/production/MatrixCalculator/maths/DecimalMatrix.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/MatrixCalculator/maths/Fraction.class" afterPath="$PROJECT_DIR$/out/production/MatrixCalculator/maths/Fraction.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/MatrixCalculator/maths/FractionMatrix.class" afterPath="$PROJECT_DIR$/out/production/MatrixCalculator/maths/FractionMatrix.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/MatrixCalculator/maths/Matrix.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/MatrixCalculator/maths/MatrixOperational.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/MatrixCalculator/maths/Vector.class" afterPath="$PROJECT_DIR$/out/production/MatrixCalculator/maths/Vector.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/AdditionWorkSpace.class" afterPath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/AdditionWorkSpace.class" />
       <change beforePath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/CalcGUI.class" afterPath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/CalcGUI.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/Controller.class" afterPath="" />
       <change beforePath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/CoordinateGrid.class" afterPath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/CoordinateGrid.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/DeterminantWorkSpace.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/GaussJordanWorkSpace.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/InversionWorkSpace.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/Main.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/Matrix.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/DeterminantWorkSpace.class" afterPath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/DeterminantWorkSpace.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/GaussJordanWorkSpace.class" afterPath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/GaussJordanWorkSpace.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/InversionWorkSpace.class" afterPath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/InversionWorkSpace.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/Main.class" afterPath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/Main.class" />
       <change beforePath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/MatrixMultWorkSpace$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/MatrixMultWorkSpace.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/MatrixOperational.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/MatrixMultWorkSpace.class" afterPath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/MatrixMultWorkSpace.class" />
       <change beforePath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/MatrixWorkSpace.class" afterPath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/MatrixWorkSpace.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/RankWorkSpace.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/ScalarMultWorkSpace.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/SubtractionWorkSpace.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/RankWorkSpace.class" afterPath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/RankWorkSpace.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/ScalarMultWorkSpace.class" afterPath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/ScalarMultWorkSpace.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/SubtractionWorkSpace.class" afterPath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/SubtractionWorkSpace.class" />
       <change beforePath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/TransformationWorkSpace.class" afterPath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/TransformationWorkSpace.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/TransposeWorkSpace.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/Vector.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/TransposeWorkSpace.class" afterPath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/TransposeWorkSpace.class" />
       <change beforePath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/VectorInputBox$1.class" afterPath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/VectorInputBox$1.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/VectorInputBox.class" afterPath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/VectorInputBox.class" />
       <change beforePath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/VectorPolygon.class" afterPath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/VectorPolygon.class" />
-      <change beforePath="$PROJECT_DIR$/src/maths/Fraction.java" afterPath="$PROJECT_DIR$/src/maths/Fraction.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/AdditionWorkSpace.java" afterPath="$PROJECT_DIR$/src/sample/AdditionWorkSpace.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/CalcGUI.java" afterPath="$PROJECT_DIR$/src/sample/CalcGUI.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/CoordinateGrid.java" afterPath="$PROJECT_DIR$/src/sample/CoordinateGrid.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/DeterminantWorkSpace.java" afterPath="$PROJECT_DIR$/src/sample/DeterminantWorkSpace.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/GaussJordanWorkSpace.java" afterPath="$PROJECT_DIR$/src/sample/GaussJordanWorkSpace.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/InversionWorkSpace.java" afterPath="$PROJECT_DIR$/src/sample/InversionWorkSpace.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" afterPath="$PROJECT_DIR$/src/sample/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Matrix.java" afterPath="$PROJECT_DIR$/src/maths/DecimalMatrix.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/MatrixMultWorkSpace.java" afterPath="$PROJECT_DIR$/src/sample/MatrixMultWorkSpace.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/MatrixOperational.java" afterPath="$PROJECT_DIR$/src/sample/WorkSpaceOperational.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/MatrixWorkSpace.java" afterPath="$PROJECT_DIR$/src/sample/MatrixWorkSpace.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/RankWorkSpace.java" afterPath="$PROJECT_DIR$/src/sample/RankWorkSpace.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/SubtractionWorkSpace.java" afterPath="$PROJECT_DIR$/src/sample/SubtractionWorkSpace.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/TransformationWorkSpace.java" afterPath="$PROJECT_DIR$/src/sample/TransformationWorkSpace.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Vector.java" afterPath="$PROJECT_DIR$/src/maths/Vector.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/VectorPolygon.java" afterPath="$PROJECT_DIR$/src/sample/VectorPolygon.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/VisualMatrix.java" afterPath="$PROJECT_DIR$/src/sample/VisualMatrix.java" />
+      <change beforePath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/VisualMatrix$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/VisualMatrix.class" afterPath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/VisualMatrix.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/WorkSpaceOperational.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/matrix-calc-style.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/MatrixCalculator/sample/sample.fxml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/maths/DecimalMatrix.java" afterPath="$PROJECT_DIR$/src/vectortransform/DecimalMatrix.java" />
+      <change beforePath="$PROJECT_DIR$/src/maths/Fraction.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/maths/FractionMatrix.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/maths/Matrix.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/maths/MatrixOperational.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/maths/Vector.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/sample/AdditionWorkSpace.java" afterPath="$PROJECT_DIR$/src/matrixops/workspaces/AdditionWorkSpace.java" />
+      <change beforePath="$PROJECT_DIR$/src/sample/CalcGUI.java" afterPath="$PROJECT_DIR$/src/base/CalcGUI.java" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/sample/CoordinateGrid.java" afterPath="$PROJECT_DIR$/src/vectortransform/CoordinateGrid.java" />
+      <change beforePath="$PROJECT_DIR$/src/sample/DeterminantWorkSpace.java" afterPath="$PROJECT_DIR$/src/matrixops/workspaces/DeterminantWorkSpace.java" />
+      <change beforePath="$PROJECT_DIR$/src/sample/GaussJordanWorkSpace.java" afterPath="$PROJECT_DIR$/src/matrixops/workspaces/GaussJordanWorkSpace.java" />
+      <change beforePath="$PROJECT_DIR$/src/sample/InversionWorkSpace.java" afterPath="$PROJECT_DIR$/src/matrixops/workspaces/InversionWorkSpace.java" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" afterPath="$PROJECT_DIR$/src/base/Main.java" />
+      <change beforePath="$PROJECT_DIR$/src/sample/MatrixMultWorkSpace.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/sample/MatrixWorkSpace.java" afterPath="$PROJECT_DIR$/src/matrixops/workspaces/MatrixWorkSpace.java" />
+      <change beforePath="$PROJECT_DIR$/src/sample/RankWorkSpace.java" afterPath="$PROJECT_DIR$/src/matrixops/workspaces/RankWorkSpace.java" />
+      <change beforePath="$PROJECT_DIR$/src/sample/ScalarMultWorkSpace.java" afterPath="$PROJECT_DIR$/src/matrixops/workspaces/ScalarMultWorkSpace.java" />
+      <change beforePath="$PROJECT_DIR$/src/sample/SubtractionWorkSpace.java" afterPath="$PROJECT_DIR$/src/matrixops/workspaces/SubtractionWorkSpace.java" />
+      <change beforePath="$PROJECT_DIR$/src/sample/TransformationWorkSpace.java" afterPath="$PROJECT_DIR$/src/vectortransform/TransformationWorkSpace.java" />
+      <change beforePath="$PROJECT_DIR$/src/sample/TransposeWorkSpace.java" afterPath="$PROJECT_DIR$/src/matrixops/workspaces/TransposeWorkSpace.java" />
+      <change beforePath="$PROJECT_DIR$/src/sample/VectorInputBox.java" afterPath="$PROJECT_DIR$/src/vectortransform/VectorInputBox.java" />
+      <change beforePath="$PROJECT_DIR$/src/sample/VectorPolygon.java" afterPath="$PROJECT_DIR$/src/vectortransform/VectorPolygon.java" />
+      <change beforePath="$PROJECT_DIR$/src/sample/VisualMatrix.java" afterPath="$PROJECT_DIR$/src/matrixops/VisualMatrix.java" />
+      <change beforePath="$PROJECT_DIR$/src/sample/WorkSpaceOperational.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/sample/img/icon-16.jpg" afterPath="$PROJECT_DIR$/src/base/img/icon-16.jpg" />
+      <change beforePath="$PROJECT_DIR$/src/sample/img/icon-32.jpg" afterPath="$PROJECT_DIR$/src/base/img/icon-32.jpg" />
+      <change beforePath="$PROJECT_DIR$/src/sample/img/icon-54.jpg" afterPath="$PROJECT_DIR$/src/base/img/icon-54.jpg" />
+      <change beforePath="$PROJECT_DIR$/src/sample/img/icon-96.jpg" afterPath="$PROJECT_DIR$/src/base/img/icon-96.jpg" />
+      <change beforePath="$PROJECT_DIR$/src/sample/img/icon-original.jpg" afterPath="$PROJECT_DIR$/src/base/img/icon-original.jpg" />
+      <change beforePath="$PROJECT_DIR$/src/sample/matrix-calc-style.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/sample/sample.fxml" afterPath="" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -107,126 +140,123 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+      <file leaf-file-name="TransposeWorkSpace.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/matrixops/workspaces/TransposeWorkSpace.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="18" column="31" lean-forward="false" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GaussJordanWorkSpace.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/GaussJordanWorkSpace.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1380">
-              <caret line="61" column="26" lean-forward="false" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
+            <state relative-caret-position="207">
+              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Fraction.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/maths/Fraction.java">
+      <file leaf-file-name="Fraction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/matrixops/maths/Fraction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2967">
-              <caret line="129" column="0" lean-forward="true" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+            <state relative-caret-position="23">
+              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
               <folding>
-                <element signature="e#191#192#0" expanded="true" />
-                <element signature="e#223#224#0" expanded="true" />
-                <element signature="e#265#266#0" expanded="true" />
-                <element signature="e#299#300#0" expanded="true" />
-                <element signature="e#4306#4307#0" expanded="true" />
-                <element signature="e#4348#4349#0" expanded="true" />
-                <element signature="e#4384#4385#0" expanded="true" />
-                <element signature="e#4452#4453#0" expanded="true" />
-                <element signature="e#4490#4491#0" expanded="true" />
-                <element signature="e#4574#4575#0" expanded="true" />
-                <element signature="e#4613#4614#0" expanded="true" />
-                <element signature="e#4675#4676#0" expanded="true" />
+                <element signature="e#201#202#0" expanded="true" />
+                <element signature="e#233#234#0" expanded="true" />
+                <element signature="e#275#276#0" expanded="true" />
+                <element signature="e#309#310#0" expanded="true" />
+                <element signature="e#4316#4317#0" expanded="true" />
+                <element signature="e#4358#4359#0" expanded="true" />
+                <element signature="e#4394#4395#0" expanded="true" />
+                <element signature="e#4462#4463#0" expanded="true" />
+                <element signature="e#4500#4501#0" expanded="true" />
+                <element signature="e#4584#4585#0" expanded="true" />
+                <element signature="e#4623#4624#0" expanded="true" />
+                <element signature="e#4685#4686#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FractionMatrix.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/maths/FractionMatrix.java">
+      <file leaf-file-name="MatrixMultWorkSpace.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/matrixops/workspaces/MatrixMultWorkSpace.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1556">
-              <caret line="436" column="30" lean-forward="false" selection-start-line="436" selection-start-column="12" selection-end-line="436" selection-end-column="30" />
+            <state relative-caret-position="0">
+              <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#376#377#0" expanded="true" />
-                <element signature="e#400#401#0" expanded="true" />
-                <element signature="e#425#426#0" expanded="true" />
-                <element signature="e#449#450#0" expanded="true" />
-                <element signature="e#480#481#0" expanded="true" />
-                <element signature="e#501#502#0" expanded="true" />
-                <element signature="e#532#533#0" expanded="true" />
-                <element signature="e#553#554#0" expanded="true" />
-                <element signature="e#590#591#0" expanded="true" />
-                <element signature="e#617#618#0" expanded="true" />
-                <element signature="e#663#664#0" expanded="true" />
-                <element signature="e#695#696#0" expanded="true" />
-                <element signature="e#753#754#0" expanded="true" />
-                <element signature="e#785#786#0" expanded="true" />
-                <element signature="e#833#834#0" expanded="true" />
-                <element signature="e#866#867#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CalcGUI.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/CalcGUI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="55" column="84" lean-forward="true" selection-start-line="55" selection-start-column="84" selection-end-line="55" selection-end-column="84" />
-              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="MatrixWorkSpace.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/MatrixWorkSpace.java">
+        <entry file="file://$PROJECT_DIR$/src/matrixops/workspaces/MatrixWorkSpace.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4063">
-              <caret line="201" column="9" lean-forward="true" selection-start-line="201" selection-start-column="9" selection-end-line="201" selection-end-column="9" />
+            <state relative-caret-position="0">
+              <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FractionMatrix.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/matrixops/maths/FractionMatrix.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1495">
+              <caret line="65" column="11" lean-forward="false" selection-start-line="65" selection-start-column="11" selection-end-line="65" selection-end-column="11" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#263#264#0" expanded="true" />
+                <element signature="e#287#288#0" expanded="true" />
+                <element signature="e#312#313#0" expanded="true" />
+                <element signature="e#336#337#0" expanded="true" />
+                <element signature="e#374#375#0" expanded="true" />
+                <element signature="e#401#402#0" expanded="true" />
+                <element signature="e#459#460#0" expanded="true" />
+                <element signature="e#491#492#0" expanded="true" />
+                <element signature="e#539#540#0" expanded="true" />
+                <element signature="e#572#573#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="matrix-calc-style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/matrix-calc-style.css">
+      <file leaf-file-name="RankWorkSpace.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/matrixops/workspaces/RankWorkSpace.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="105" column="37" lean-forward="false" selection-start-line="105" selection-start-column="37" selection-end-line="105" selection-end-column="37" />
+            <state relative-caret-position="207">
+              <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="VisualMatrix.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/VisualMatrix.java">
+        <entry file="file://$PROJECT_DIR$/src/matrixops/VisualMatrix.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1035">
-              <caret line="69" column="51" lean-forward="true" selection-start-line="69" selection-start-column="51" selection-end-line="69" selection-end-column="51" />
+            <state relative-caret-position="759">
+              <caret line="33" column="11" lean-forward="false" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#422#423#0" expanded="true" />
+                <element signature="e#446#447#0" expanded="true" />
+                <element signature="e#471#472#0" expanded="true" />
+                <element signature="e#495#496#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ScalarMultWorkSpace.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/matrixops/workspaces/ScalarMultWorkSpace.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MatrixMultWorkSpace.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/MatrixMultWorkSpace.java">
+      <file leaf-file-name="SubtractionWorkSpace.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/matrixops/workspaces/SubtractionWorkSpace.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="13" lean-forward="true" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+            <state relative-caret-position="207">
+              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -237,9 +267,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -261,17 +292,24 @@
       <find>transpose</find>
       <find>data[i][j] =</find>
       <find>data[i][k] =</find>
-      <find>DecimalMatrix</find>
       <find>visual</find>
       <find>intVa</find>
-      <find>DecimalM</find>
+      <find>DecimalMatrix</find>
       <find>System.out.println</find>
+      <find>height</find>
+      <find>DecimalM</find>
+      <find>-translate-y</find>
+      <find>bottom</find>
+      <find>changeWork</find>
+      <find>point vector</find>
+      <find>getPosition</find>
     </findStrings>
     <replaceStrings>
       <replace>C</replace>
       <replace>FractionMatrix</replace>
       <replace>Matrix</replace>
       <replace>setElement(i, j,</replace>
+      <replace>position vector</replace>
     </replaceStrings>
   </component>
   <component name="FindManager">
@@ -290,38 +328,52 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/sample/TransposeWorkSpace.java" />
-        <option value="$PROJECT_DIR$/src/sample/ScalarMultWorkSpace.java" />
-        <option value="$PROJECT_DIR$/src/sample/InversionWorkSpace.java" />
         <option value="$PROJECT_DIR$/src/Vector.java" />
         <option value="$PROJECT_DIR$/src/sample/Matrix.java" />
         <option value="$PROJECT_DIR$/src/sample/WorkSpace.java" />
-        <option value="$PROJECT_DIR$/src/sample/VectorInputBox.java" />
-        <option value="$PROJECT_DIR$/src/sample/matrix-calc-style.css" />
         <option value="$PROJECT_DIR$/src/sample/Vector.java" />
-        <option value="$PROJECT_DIR$/src/sample/TransformationWorkSpace.java" />
-        <option value="$PROJECT_DIR$/src/sample/VectorPolygon.java" />
-        <option value="$PROJECT_DIR$/src/sample/CoordinateGrid.java" />
         <option value="$PROJECT_DIR$/src/sample/MatrixOperational.java" />
         <option value="$PROJECT_DIR$/src/sample/WorkSpaceOperational.java" />
         <option value="$PROJECT_DIR$/src/maths/Interface.java" />
         <option value="$PROJECT_DIR$/src/maths/MatrixOperational.java" />
-        <option value="$PROJECT_DIR$/src/maths/Vector.java" />
         <option value="$PROJECT_DIR$/src/maths/FractionVector.java" />
-        <option value="$PROJECT_DIR$/src/sample/AdditionWorkSpace.java" />
-        <option value="$PROJECT_DIR$/src/maths/DecimalMatrix.java" />
         <option value="$PROJECT_DIR$/src/maths/Matrix.java" />
-        <option value="$PROJECT_DIR$/src/sample/SubtractionWorkSpace.java" />
-        <option value="$PROJECT_DIR$/src/sample/MatrixWorkSpace.java" />
+        <option value="$PROJECT_DIR$/src/maths/Fraction.java" />
+        <option value="$PROJECT_DIR$/src/maths/FractionMatrix.java" />
+        <option value="$PROJECT_DIR$/src/maths/DecimalMatrix.java" />
+        <option value="$PROJECT_DIR$/src/maths/Vector.java" />
+        <option value="$PROJECT_DIR$/src/sample/matrix-calc-style.css" />
+        <option value="$PROJECT_DIR$/src/sample/GaussJordanWorkSpace.java" />
         <option value="$PROJECT_DIR$/src/sample/DeterminantWorkSpace.java" />
+        <option value="$PROJECT_DIR$/src/sample/InversionWorkSpace.java" />
+        <option value="$PROJECT_DIR$/src/sample/TransposeWorkSpace.java" />
+        <option value="$PROJECT_DIR$/src/sample/AdditionWorkSpace.java" />
+        <option value="$PROJECT_DIR$/src/sample/SubtractionWorkSpace.java" />
         <option value="$PROJECT_DIR$/src/sample/RankWorkSpace.java" />
         <option value="$PROJECT_DIR$/src/sample/VisualMatrix.java" />
         <option value="$PROJECT_DIR$/src/sample/MatrixMultWorkSpace.java" />
-        <option value="$PROJECT_DIR$/src/sample/GaussJordanWorkSpace.java" />
-        <option value="$PROJECT_DIR$/src/sample/Main.java" />
+        <option value="$PROJECT_DIR$/src/sample/ScalarMultWorkSpace.java" />
         <option value="$PROJECT_DIR$/src/sample/CalcGUI.java" />
-        <option value="$PROJECT_DIR$/src/maths/FractionMatrix.java" />
-        <option value="$PROJECT_DIR$/src/maths/Fraction.java" />
+        <option value="$PROJECT_DIR$/src/sample/CoordinateGrid.java" />
+        <option value="$PROJECT_DIR$/src/sample/MatrixWorkSpace.java" />
+        <option value="$PROJECT_DIR$/src/sample/TransformationWorkSpace.java" />
+        <option value="$PROJECT_DIR$/src/sample/VectorPolygon.java" />
+        <option value="$PROJECT_DIR$/src/sample/VectorInputBox.java" />
+        <option value="$PROJECT_DIR$/src/sample/WorkSpaceType.java" />
+        <option value="$PROJECT_DIR$/src/stylesheets/matrix-workspace-styles.css" />
+        <option value="$PROJECT_DIR$/src/stylesheets/top-bar-styles.css" />
+        <option value="$PROJECT_DIR$/src/stylesheets/matrix-calc-style.css" />
+        <option value="$PROJECT_DIR$/src/stylesheets/transformation-styles.css" />
+        <option value="$PROJECT_DIR$/src/sample/Main.java" />
+        <option value="$PROJECT_DIR$/src/matrixops/FractionMatrix.java" />
+        <option value="$PROJECT_DIR$/src/vectortransform/Vector.java" />
+        <option value="$PROJECT_DIR$/src/matrixops/TransposeWorkSpace.java" />
+        <option value="$PROJECT_DIR$/src/vectortransform/TransformationWorkSpace.java" />
+        <option value="$PROJECT_DIR$/src/vectortransform/VectorPolygon.java" />
+        <option value="$PROJECT_DIR$/src/matrixops/workspaces/TransposeWorkSpace.java" />
+        <option value="$PROJECT_DIR$/src/matrixops/VisualMatrix.java" />
+        <option value="$PROJECT_DIR$/src/vectortransform/DecimalMatrix.java" />
+        <option value="$PROJECT_DIR$/src/matrixops/maths/FractionMatrix.java" />
       </list>
     </option>
   </component>
@@ -332,10 +384,11 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="258" />
+    <option name="y" value="-22" />
     <option name="width" value="1936" />
-    <option name="height" value="2130" />
+    <option name="height" value="1355" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
@@ -371,18 +424,6 @@
               <item name="MatrixCalculator" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="MatrixCalculator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MatrixCalculator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="maths" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MatrixCalculator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MatrixCalculator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -402,9 +443,17 @@
     <property name="dynamic.classpath" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../VideoApp2" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mthur\Github\MatrixCalculator\src\stylesheets" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -430,11 +479,11 @@
     <configuration name="Main" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="sample.MatrixWorkSpace" />
+          <option name="PATTERN" value="matrixops.workspaces.MatrixWorkSpace" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="sample.Main" />
+      <option name="MAIN_CLASS_NAME" value="base.Main" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -560,12 +609,12 @@
       <workItem from="1516411476409" duration="10751000" />
       <workItem from="1516481711941" duration="6911000" />
       <workItem from="1516541100664" duration="48161000" />
-      <workItem from="1516745167177" duration="31354000" />
+      <workItem from="1516745167177" duration="63364000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="203901000" />
+    <option name="totallyTimeSpent" value="235911000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -577,27 +626,26 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1936" height="2130" extended-state="0" />
-    <editor active="true" />
+    <frame x="-9" y="-9" width="3858" height="2140" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297546" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297546" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909462" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297546" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297546" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3415133" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33926755" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295699" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1844086" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1274458" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297546" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960325" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2498678" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -634,103 +682,7 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/sample/WorkSpaceOperational.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="15" lean-forward="true" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/VisualMatrix.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="15" lean-forward="true" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#371#372#0" expanded="false" />
-            <element signature="e#392#393#0" expanded="false" />
-            <element signature="e#423#424#0" expanded="false" />
-            <element signature="e#444#445#0" expanded="false" />
-            <element signature="e#469#470#0" expanded="false" />
-            <element signature="e#493#494#0" expanded="false" />
-            <element signature="e#518#519#0" expanded="false" />
-            <element signature="e#542#543#0" expanded="false" />
-            <element signature="e#1287#1288#0" expanded="false" />
-            <element signature="e#1348#1349#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/matrix-calc-style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1496">
-          <caret line="68" column="1" lean-forward="true" selection-start-line="68" selection-start-column="1" selection-end-line="68" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="21" column="28" lean-forward="false" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/CalcGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="50" column="5" lean-forward="false" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/maths/DecimalMatrix.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1760">
-          <caret line="92" column="5" lean-forward="false" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/WorkSpaceOperational.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="32" lean-forward="false" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/AdditionWorkSpace.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/VisualMatrix.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="18" column="23" lean-forward="false" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#371#372#0" expanded="false" />
-            <element signature="e#392#393#0" expanded="false" />
-            <element signature="e#423#424#0" expanded="false" />
-            <element signature="e#444#445#0" expanded="false" />
-            <element signature="e#469#470#0" expanded="false" />
-            <element signature="e#493#494#0" expanded="false" />
-            <element signature="e#518#519#0" expanded="false" />
-            <element signature="e#542#543#0" expanded="false" />
-            <element signature="e#1287#1288#0" expanded="false" />
-            <element signature="e#1348#1349#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/matrix-calc-style.css">
+    <entry file="file://$PROJECT_DIR$/src/stylesheets/base-styles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="616">
           <caret line="28" column="24" lean-forward="false" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
@@ -738,22 +690,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/MatrixWorkSpace.java">
+    <entry file="file://$PROJECT_DIR$/src/matrixops/workspaces/MatrixWorkSpace.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1342">
           <caret line="66" column="13" lean-forward="false" selection-start-line="66" selection-start-column="13" selection-end-line="66" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/base/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -776,58 +728,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/TransposeWorkSpace.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="8" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="130" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/ScalarMultWorkSpace.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="45" column="94" lean-forward="false" selection-start-line="45" selection-start-column="94" selection-end-line="45" selection-end-column="94" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_152/src.zip!/java/awt/image/BufferedImage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2376">
           <caret line="531" column="37" lean-forward="true" selection-start-line="531" selection-start-column="37" selection-end-line="531" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/InversionWorkSpace.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="44" column="48" lean-forward="false" selection-start-line="44" selection-start-column="48" selection-end-line="44" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -849,6 +753,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1059">
           <caret line="140" column="42" lean-forward="false" selection-start-line="140" selection-start-column="42" selection-end-line="140" selection-end-column="42" />
+          <folding>
+            <element signature="e#4298#4299#0" expanded="false" />
+            <element signature="e#4340#4341#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -860,80 +768,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/VectorInputBox.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="58" column="44" lean-forward="false" selection-start-line="58" selection-start-column="44" selection-end-line="58" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#690#691#0" expanded="false" />
-            <element signature="e#720#721#0" expanded="false" />
-            <element signature="e#769#770#0" expanded="false" />
-            <element signature="e#799#800#0" expanded="false" />
-            <element signature="e#834#835#0" expanded="false" />
-            <element signature="e#868#869#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/CoordinateGrid.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1012">
-          <caret line="44" column="16" lean-forward="false" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/VectorPolygon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="28" lean-forward="true" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#244#245#0" expanded="false" />
-            <element signature="e#282#283#0" expanded="false" />
-            <element signature="e#325#326#0" expanded="false" />
-            <element signature="e#362#363#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_152/javafx-src.zip!/javafx/event/EventHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="44" column="9" lean-forward="false" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/TransformationWorkSpace.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="889">
-          <caret line="155" column="9" lean-forward="true" selection-start-line="155" selection-start-column="9" selection-end-line="155" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#599#600#0" expanded="false" />
-            <element signature="e#636#637#0" expanded="false" />
-            <element signature="e#671#672#0" expanded="false" />
-            <element signature="e#700#701#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/maths/Interface.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
           <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/WorkSpaceOperational.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="37" lean-forward="false" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -962,75 +800,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/SubtractionWorkSpace.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="24" column="31" lean-forward="false" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/maths/MatrixOperational.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
           <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/DeterminantWorkSpace.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="32" column="48" lean-forward="false" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/maths/Vector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2699">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding>
-            <element signature="e#309#310#0" expanded="true" />
-            <element signature="e#336#337#0" expanded="true" />
-            <element signature="e#611#612#0" expanded="true" />
-            <element signature="e#648#649#0" expanded="true" />
-            <element signature="e#701#702#0" expanded="true" />
-            <element signature="e#733#734#0" expanded="true" />
-            <element signature="e#2980#2981#0" expanded="true" />
-            <element signature="e#3019#3020#0" expanded="true" />
-            <element signature="e#3066#3067#0" expanded="true" />
-            <element signature="e#3105#3106#0" expanded="true" />
-            <element signature="e#3163#3164#0" expanded="true" />
-            <element signature="e#3207#3208#0" expanded="true" />
-            <element signature="e#4564#4565#0" expanded="true" />
-            <element signature="e#4609#4610#0" expanded="true" />
-            <element signature="e#4658#4659#0" expanded="true" />
-            <element signature="e#4703#4704#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/RankWorkSpace.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="31" column="47" lean-forward="false" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/AdditionWorkSpace.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/maths/DecimalMatrix.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="41" lean-forward="false" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
           <folding />
         </state>
       </provider>
@@ -1043,112 +816,427 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/MatrixMultWorkSpace.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/base/img/icon-16.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/base/img/icon-54.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/base/img/icon-original.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_152/src.zip!/java/lang/Double.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="48" column="19" lean-forward="false" selection-start-line="48" selection-start-column="19" selection-end-line="48" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_152/javafx-src.zip!/javafx/scene/text/Text.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2922">
+          <caret line="367" column="22" lean-forward="false" selection-start-line="367" selection-start-column="22" selection-end-line="367" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_152/javafx-src.zip!/javafx/event/EventHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="44" column="9" lean-forward="false" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/base/CalcGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2507">
+          <caret line="117" column="50" lean-forward="false" selection-start-line="117" selection-start-column="50" selection-end-line="117" selection-end-column="50" />
+          <folding>
+            <element signature="e#5282#5283#0" expanded="false" />
+            <element signature="e#5337#5338#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/WorkSpaceOperational.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="37" lean-forward="false" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/base/WorkSpaceType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="22" column="84" lean-forward="false" selection-start-line="22" selection-start-column="84" selection-end-line="22" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stylesheets/top-bottom-bar-styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1768">
+          <caret line="100" column="1" lean-forward="false" selection-start-line="100" selection-start-column="1" selection-end-line="100" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stylesheets/transformation-styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-693">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stylesheets/matrix-workspace-styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="45" column="1" lean-forward="false" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stylesheets/base-styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="736">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/base/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="15" lean-forward="false" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1310#1311#0" expanded="false" />
+            <element signature="e#1338#1339#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vectortransform/Vector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="e#1140#1141#0" expanded="false" />
+            <element signature="e#1167#1168#0" expanded="false" />
+            <element signature="e#6928#6929#0" expanded="false" />
+            <element signature="e#6967#6968#0" expanded="false" />
+            <element signature="e#7178#7179#0" expanded="false" />
+            <element signature="e#7217#7218#0" expanded="false" />
+            <element signature="e#7445#7446#0" expanded="false" />
+            <element signature="e#7489#7490#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vectortransform/TransformationWorkSpace.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vectortransform/VectorInputBox.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="13" lean-forward="true" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <element signature="e#845#846#0" expanded="false" />
+            <element signature="e#875#876#0" expanded="false" />
+            <element signature="e#924#925#0" expanded="false" />
+            <element signature="e#954#955#0" expanded="false" />
+            <element signature="e#989#990#0" expanded="false" />
+            <element signature="e#1023#1024#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vectortransform/CoordinateGrid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/MatrixWorkSpace.java">
+    <entry file="file://$PROJECT_DIR$/src/vectortransform/VectorPolygon.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4063">
-          <caret line="201" column="9" lean-forward="true" selection-start-line="201" selection-start-column="9" selection-end-line="201" selection-end-column="9" />
+        <state relative-caret-position="230">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="e#454#455#0" expanded="false" />
+            <element signature="e#492#493#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/matrixops/workspaces/AdditionWorkSpace.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/matrixops/workspaces/DeterminantWorkSpace.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/matrixops/workspaces/GaussJordanWorkSpace.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/matrixops/workspaces/InversionWorkSpace.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/matrixops/workspaces/MatrixMultWorkSpace.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/VisualMatrix.java">
+    <entry file="file://$PROJECT_DIR$/src/matrixops/workspaces/MatrixWorkSpace.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1035">
-          <caret line="69" column="51" lean-forward="true" selection-start-line="69" selection-start-column="51" selection-end-line="69" selection-end-column="51" />
+        <state relative-caret-position="0">
+          <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/matrix-calc-style.css">
+    <entry file="file://$PROJECT_DIR$/src/matrixops/workspaces/ScalarMultWorkSpace.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="105" column="37" lean-forward="false" selection-start-line="105" selection-start-column="37" selection-end-line="105" selection-end-column="37" />
+        <state relative-caret-position="207">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/matrixops/workspaces/SubtractionWorkSpace.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="18" column="31" lean-forward="false" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+        <state relative-caret-position="207">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/matrixops/workspaces/RankWorkSpace.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/matrixops/VisualMatrix.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="759">
+          <caret line="33" column="11" lean-forward="false" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#422#423#0" expanded="true" />
+            <element signature="e#446#447#0" expanded="true" />
+            <element signature="e#471#472#0" expanded="true" />
+            <element signature="e#495#496#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/GaussJordanWorkSpace.java">
+    <entry file="file://$PROJECT_DIR$/src/matrixops/maths/Fraction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1380">
-          <caret line="61" column="26" lean-forward="false" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
+        <state relative-caret-position="23">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding>
+            <element signature="e#201#202#0" expanded="true" />
+            <element signature="e#233#234#0" expanded="true" />
+            <element signature="e#275#276#0" expanded="true" />
+            <element signature="e#309#310#0" expanded="true" />
+            <element signature="e#4316#4317#0" expanded="true" />
+            <element signature="e#4358#4359#0" expanded="true" />
+            <element signature="e#4394#4395#0" expanded="true" />
+            <element signature="e#4462#4463#0" expanded="true" />
+            <element signature="e#4500#4501#0" expanded="true" />
+            <element signature="e#4584#4585#0" expanded="true" />
+            <element signature="e#4623#4624#0" expanded="true" />
+            <element signature="e#4685#4686#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/matrixops/workspaces/TransposeWorkSpace.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/CalcGUI.java">
+    <entry file="file://$PROJECT_DIR$/src/vectortransform/DecimalMatrix.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="55" column="84" lean-forward="true" selection-start-line="55" selection-start-column="84" selection-end-line="55" selection-end-column="84" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/maths/FractionMatrix.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1556">
-          <caret line="436" column="30" lean-forward="false" selection-start-line="436" selection-start-column="12" selection-end-line="436" selection-end-column="30" />
+        <state relative-caret-position="1175">
+          <caret line="464" column="0" lean-forward="false" selection-start-line="464" selection-start-column="0" selection-end-line="464" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#376#377#0" expanded="true" />
-            <element signature="e#400#401#0" expanded="true" />
-            <element signature="e#425#426#0" expanded="true" />
-            <element signature="e#449#450#0" expanded="true" />
-            <element signature="e#480#481#0" expanded="true" />
-            <element signature="e#501#502#0" expanded="true" />
-            <element signature="e#532#533#0" expanded="true" />
-            <element signature="e#553#554#0" expanded="true" />
-            <element signature="e#590#591#0" expanded="true" />
-            <element signature="e#617#618#0" expanded="true" />
-            <element signature="e#663#664#0" expanded="true" />
-            <element signature="e#695#696#0" expanded="true" />
-            <element signature="e#753#754#0" expanded="true" />
-            <element signature="e#785#786#0" expanded="true" />
-            <element signature="e#833#834#0" expanded="true" />
-            <element signature="e#866#867#0" expanded="true" />
+            <element signature="e#661#662#0" expanded="true" />
+            <element signature="e#685#686#0" expanded="true" />
+            <element signature="e#710#711#0" expanded="true" />
+            <element signature="e#734#735#0" expanded="true" />
+            <element signature="e#769#770#0" expanded="true" />
+            <element signature="e#796#797#0" expanded="true" />
+            <element signature="e#841#842#0" expanded="true" />
+            <element signature="e#873#874#0" expanded="true" />
+            <element signature="e#929#930#0" expanded="true" />
+            <element signature="e#961#962#0" expanded="true" />
+            <element signature="e#1008#1009#0" expanded="true" />
+            <element signature="e#1041#1042#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/maths/Fraction.java">
+    <entry file="file://$PROJECT_DIR$/src/matrixops/maths/FractionMatrix.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2967">
-          <caret line="129" column="0" lean-forward="true" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+        <state relative-caret-position="1495">
+          <caret line="65" column="11" lean-forward="false" selection-start-line="65" selection-start-column="11" selection-end-line="65" selection-end-column="11" />
           <folding>
-            <element signature="e#191#192#0" expanded="true" />
-            <element signature="e#223#224#0" expanded="true" />
-            <element signature="e#265#266#0" expanded="true" />
-            <element signature="e#299#300#0" expanded="true" />
-            <element signature="e#4306#4307#0" expanded="true" />
-            <element signature="e#4348#4349#0" expanded="true" />
-            <element signature="e#4384#4385#0" expanded="true" />
-            <element signature="e#4452#4453#0" expanded="true" />
-            <element signature="e#4490#4491#0" expanded="true" />
-            <element signature="e#4574#4575#0" expanded="true" />
-            <element signature="e#4613#4614#0" expanded="true" />
-            <element signature="e#4675#4676#0" expanded="true" />
+            <element signature="e#263#264#0" expanded="true" />
+            <element signature="e#287#288#0" expanded="true" />
+            <element signature="e#312#313#0" expanded="true" />
+            <element signature="e#336#337#0" expanded="true" />
+            <element signature="e#374#375#0" expanded="true" />
+            <element signature="e#401#402#0" expanded="true" />
+            <element signature="e#459#460#0" expanded="true" />
+            <element signature="e#491#492#0" expanded="true" />
+            <element signature="e#539#540#0" expanded="true" />
+            <element signature="e#572#573#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>MatrixCalculator</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>MatrixCalculator</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

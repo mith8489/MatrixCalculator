@@ -1,0 +1,32 @@
+
+*
+{
+    -fx-base-background: #E0E8F7;
+    -fx-bar-colour: #4267B2;
+    -fx-button-colour: #4267B2;
+    -fx-button-hover-colour: #6287D2;
+    -fx-solve-button-colour: #EF7200;
+    -fx-solve-button-hover-colour: #FF8200;
+}
+
+.button
+{
+    -fx-font-weight: 800;
+    -fx-text-fill: #FFF;
+    -fx-background-color: -fx-bar-colour;
+    -fx-border-radius: 0;
+    -fx-border-style: solid;
+    -fx-border-width: 2px;
+    -fx-border-color: #FFF;
+}
+
+.button:hover
+{
+    -fx-background-color: -fx-button-hover-colour;
+}
+
+.calc-gui
+{
+    -fx-background-color: -fx-base-background;
+}
+
