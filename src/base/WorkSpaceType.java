@@ -3,7 +3,7 @@ package base;
 import matrixops.workspaces.*;
 
 /**
- * WorkSpaceType.java: Enum containing all types of matrix operation workspaces.
+ * Enum containing all types of matrix operation workspaces.
  * Contains functionality for setting a new workspace in the GUI.
  */
 public enum WorkSpaceType {

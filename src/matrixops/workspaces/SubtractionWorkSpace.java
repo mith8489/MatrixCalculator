@@ -4,7 +4,7 @@ import javafx.scene.Group;
 import base.CalcGUI;
 
 /**
- * SubtractionWorkSpace.java: Graphical interface for performing matrix subtraction.
+ * Graphical interface for performing matrix subtraction.
  * @author Max Thurell
  * @version 1.0
  */

@@ -5,14 +5,14 @@ import base.CalcGUI;
 
 
 /**
- * AdditionWorkSpace.java: Graphical interface for performing matrix addition.
+ * Graphical interface for performing matrix addition.
  * @author Max Thurell
  * @version 1.0
  */
 public class AdditionWorkSpace extends MatrixWorkSpace {
 
     /**
-     * Creates a new AdditionWorkSpace bound to a given CalcGUI.
+     * Creates a new AdditionWorkSpace bound to a given {@link base.CalcGUI CalcGUI}.
      * @param calcGUI Graphical User Interface in which the workspace is placed.
      */
     public AdditionWorkSpace(CalcGUI calcGUI)

@@ -47,10 +47,7 @@ public class Vector extends DecimalMatrix {
         super(values);
 
         data = new double[M][N];
-        for (int i = 0; i < values.length; i++)
-        {
-            data[i][0] = values[i];
-        }
+        for (int i = 0; i < values.length; i++) data[i][0] = values[i];
     }
 
     /*--------------------------------------------------------------------------------*/
@@ -83,10 +80,7 @@ public class Vector extends DecimalMatrix {
         if (!(object instanceof Vector)) return false;
         Vector v1 = this;
         Vector v2 = (Vector) object;
-        for (int i = 0; i < data.length; i++)
-        {
-            if (!v1.getElement(i).equals(v2.getElement(i))) return false;
-        }
+        for (int i = 0; i < data.length; i++) if (!v1.getElement(i).equals(v2.getElement(i))) return false;
         return true;
     }
 
@@ -99,11 +93,7 @@ public class Vector extends DecimalMatrix {
     public int hashCode()
     {
         int hash = 3;
-
-        for (double val : data[0])
-        {
-            hash = 31 * hash + (int) val;
-        }
+        for (double val : data[0]) hash = 31 * hash + (int) val;
         return hash;
     }
 
@@ -118,10 +108,7 @@ public class Vector extends DecimalMatrix {
     private double getMagnitude()
     {
         double magnitude = 0;
-        for (double[] val : data)
-        {
-            magnitude += Math.pow(val[0], 2);
-        }
+        for (double[] val : data) magnitude += Math.pow(val[0], 2);
 
         return Math.sqrt(magnitude);
     }
@@ -140,10 +127,7 @@ public class Vector extends DecimalMatrix {
 
         double dotProduct = 0;
 
-        for (int i = 0; i < v1.data.length; i++)
-        {
-            dotProduct += v1.getElement(i) * v2.getElement(i);
-        }
+        for (int i = 0; i < v1.data.length; i++) dotProduct += v1.getElement(i) * v2.getElement(i);
 
         return dotProduct;
     }
@@ -160,6 +144,7 @@ public class Vector extends DecimalMatrix {
     {
         Vector v1 = this;
         double dot = v1.getDotProduct(v2);
+        v2.show();
         double det = v1.concatenateVector(v2).getDeterminant();
         return Math.atan2(det, dot);
     }
@@ -297,14 +282,8 @@ public class Vector extends DecimalMatrix {
 
         DecimalMatrix rotationMatrix;
 
-        if (isClockWise)
-        {
-            rotationMatrix = make2DMatrix(Math.cos(angle), Math.sin(angle), -Math.sin(angle), Math.cos(angle));
-        }
-        else
-        {
-            rotationMatrix = make2DMatrix(Math.cos(angle), -Math.sin(angle), Math.sin(angle), Math.cos(angle));
-        }
+        if (isClockWise) rotationMatrix = make2DMatrix(Math.cos(angle), Math.sin(angle), -Math.sin(angle), Math.cos(angle));
+        else rotationMatrix = make2DMatrix(Math.cos(angle), -Math.sin(angle), Math.sin(angle), Math.cos(angle));
 
         return transform(rotationMatrix);
     }
@@ -336,10 +315,7 @@ public class Vector extends DecimalMatrix {
      * @param scalar Replaces a zero-value element in the identity matrix and dictates the multiplicative size of displacement.
      * @return This Vector, shear mapped along the x axis.
      */
-    public Vector shear2DX(double scalar)
-    {
-        return shear(2, 0, 1, scalar);
-    }
+    public Vector shear2DX(double scalar) { return shear(2, 0, 1, scalar); }
 
     /**
      * Performs a shear mapping of a point along the y axis, based on its signed distance from the y axis (equivalent to its x coordinate).
@@ -357,9 +333,5 @@ public class Vector extends DecimalMatrix {
     /**
      * Prints the contents of this Vector to the console. Vector must be two-dimensional.
      */
-    public void show()
-    {
-        System.out.println(getX() + ", " + getY());
-        System.out.println("________");
-    }
+    public void show() { System.out.println(getX() + ", " + getY()); }
 }

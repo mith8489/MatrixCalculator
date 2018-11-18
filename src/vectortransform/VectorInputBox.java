@@ -141,6 +141,8 @@ public class VectorInputBox extends HBox {
         {
             numOfPoints--;
             getChildren().remove(getChildren().size() - 1);
+            xFields.remove(getChildren().size() - 1);
+            yFields.remove(getChildren().size() - 1);
         }
     }
 }

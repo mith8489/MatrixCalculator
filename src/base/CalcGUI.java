@@ -80,7 +80,7 @@ public class CalcGUI extends BorderPane {
         workSpaceTypeSelector.getChildren().addAll(matrixWorkSpaceButton, transformationWorkSpaceButton);
 
         operationSelectorBox = new ComboBox<WorkSpaceType>();
-        operationSelectorBox.getItems().setAll(WorkSpaceType.values());
+        operationSelectorBox.getItems().setAll((Object[]) WorkSpaceType.values());
         operationSelectorBox.getSelectionModel().selectFirst();
 
         selectOperationButton = new Button("Select");

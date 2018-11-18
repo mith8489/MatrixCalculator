@@ -1,5 +1,6 @@
 package matrixops.workspaces;
 
+import com.test.mthur.matrix.Fraction;
 import javafx.scene.Group;
 import javafx.scene.control.TextField;
 import base.CalcGUI;
@@ -43,7 +44,7 @@ public class ScalarMultWorkSpace extends MatrixWorkSpace {
         matrixA = createMatrix(vMatrixA);
 
         TextField textField = (TextField) vMatrixB.getChildren().get(0);
-        int scalar = Integer.parseInt(textField.getText());
+        Fraction scalar = Fraction.fromString(textField.getText());
 
         matrixC = matrixA.scalarMult(scalar);
 

@@ -1,5 +1,7 @@
 package matrixops.workspaces;
 
+import com.test.mthur.matrix.Fraction;
+import com.test.mthur.matrix.FractionMatrix;
 import javafx.collections.ObservableList;
 import javafx.scene.Group;
 import javafx.scene.Node;
@@ -12,12 +14,10 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import base.CalcGUI;
 import matrixops.VisualMatrix;
-import matrixops.maths.Fraction;
-import matrixops.maths.FractionMatrix;
 
 /**
- * MatrixWorkSpace.java: Base graphical interface for working with matrix operations.
- * Uses VisualMatrix objects to receive data for use in operations. Data stored and operated on in FractionMatrix objects.
+ * Base graphical interface for working with matrix operations.
+ * Uses {@link VisualMatrix VisualMatrix} objects to receive data for use in operations. Data stored and operated on in {@link FractionMatrix} objects.
  * @author Max Thurell
  * @version 1.0
  */

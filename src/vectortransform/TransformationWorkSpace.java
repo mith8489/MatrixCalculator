@@ -1,11 +1,15 @@
 package vectortransform;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+
+import java.util.LinkedList;
 
 /**
  * Graphical interface for creating and displaying vectors, and performing transformations on them.
@@ -14,7 +18,7 @@ import javafx.scene.layout.VBox;
  */
 public class TransformationWorkSpace extends BorderPane {
 
-    private Vector[] points;
+    private LinkedList<Vector> points;
 
     private VectorInputBox vectorInputBox;
 
@@ -28,7 +32,7 @@ public class TransformationWorkSpace extends BorderPane {
         return coordinateGrid;
     }
 
-    public Vector[] getPoints() {
+    public LinkedList<Vector> getPoints() {
         return points;
     }
 
@@ -50,14 +54,17 @@ public class TransformationWorkSpace extends BorderPane {
      * Creates a new Vector array based on coordinates from the Vector creation fields.
      */
     public void getPositionVectors() {
-        points = new Vector[vectorInputBox.getNumOfPoints()];
+        points = new LinkedList<>();
 
-        for (int i = 0; i < points.length; i++) {
+        for (int i = 0; i < vectorInputBox.getNumOfPoints(); i++) {
+            String xText = vectorInputBox.getxFields().get(i).getText();
+            String yText = vectorInputBox.getyFields().get(i).getText();
+            if (!(xText.equals("")) && !(yText.equals("")))
             try {
-                Double xVal = Double.parseDouble(vectorInputBox.getxFields().get(i).getText());
-                Double yVal = Double.parseDouble(vectorInputBox.getyFields().get(i).getText());
-                points[i] = new Vector(xVal, yVal);
-            } catch (NumberFormatException nfe) { }
+                Double xVal = Double.parseDouble(xText);
+                Double yVal = Double.parseDouble(yText);
+                points.add(new Vector(xVal, yVal));
+            } catch (NumberFormatException nfe) { nfe.printStackTrace(); }
         }
     }
 
@@ -128,8 +135,8 @@ public class TransformationWorkSpace extends BorderPane {
         TextField rotateCWField = new TextField();
         TextField rotateCCWField = new TextField();
 
-        rotateCWButton.setOnAction(event -> rotateCW(Integer.parseInt(rotateCWField.getText())));
-        rotateCCWButton.setOnAction(event -> rotateCCW(Integer.parseInt(rotateCCWField.getText())));
+        rotateCWButton.setOnAction(event -> { if (!rotateCWField.getText().equals("")) rotateCW(Integer.parseInt(rotateCWField.getText())); });
+        rotateCCWButton.setOnAction(event -> { if (!rotateCCWField.getText().equals("")) rotateCCW(Integer.parseInt(rotateCCWField.getText())); });
 
         rotateCWBox.getChildren().addAll(rotateCWButton, rotateCWField);
         rotateCCWBox.getChildren().addAll(rotateCCWButton, rotateCCWField);
@@ -144,8 +151,8 @@ public class TransformationWorkSpace extends BorderPane {
         TextField shearXField = new TextField();
         TextField shearYField = new TextField();
 
-        shearXButton.setOnAction(event -> shearX(Double.parseDouble(shearXField.getText())));
-        shearYButton.setOnAction(event -> shearY(Double.parseDouble(shearYField.getText())));
+        shearXButton.setOnAction(event -> { if (!shearXField.getText().equals("")) shearX(Double.parseDouble(shearXField.getText())); });
+        shearYButton.setOnAction(event -> { if (!shearYField.getText().equals("")) shearY(Double.parseDouble(shearYField.getText())); });
 
         shearXBox.getChildren().addAll(shearXButton, shearXField);
         shearYBox.getChildren().addAll(shearYButton, shearYField);
@@ -168,9 +175,9 @@ public class TransformationWorkSpace extends BorderPane {
      */
     private void scaleX(double scalar)
     {
-        for (int i = 0; i < points.length; i++)
+        for (int i = 0; i < points.size(); i++)
         {
-            points[i] = points[i].scaleX(scalar);
+            points.set(i, points.get(i).scaleX(scalar));
         }
         drawVectors();
     }
@@ -181,9 +188,9 @@ public class TransformationWorkSpace extends BorderPane {
      */
     private void scaleY(double scalar)
     {
-        for (int i = 0; i < points.length; i++)
+        for (int i = 0; i < points.size(); i++)
         {
-            points[i] = points[i].scaleY(scalar);
+            points.set(i, points.get(i).scaleY(scalar));
         }
         drawVectors();
     }
@@ -194,9 +201,9 @@ public class TransformationWorkSpace extends BorderPane {
      */
     private void scaleProportional(double scalar)
     {
-        for (int i = 0; i < points.length; i++)
+        for (int i = 0; i < points.size(); i++)
         {
-            points[i] = points[i].scaleProportional(scalar);
+            points.set(i, points.get(i).scaleProportional(scalar));
         }
         drawVectors();
     }
@@ -206,9 +213,9 @@ public class TransformationWorkSpace extends BorderPane {
      */
     private void reflect()
     {
-        for (int i = 0; i < points.length; i++)
+        for (int i = 0; i < points.size(); i++)
         {
-            points[i] = points[i].reflect2DOrigin();
+            points.set(i, points.get(i).reflect2DOrigin());
         }
         drawVectors();
     }
@@ -218,9 +225,9 @@ public class TransformationWorkSpace extends BorderPane {
      */
     private void reflectX()
     {
-        for (int i = 0; i < points.length; i++)
+        for (int i = 0; i < points.size(); i++)
         {
-            points[i] = points[i].reflect2DX();
+            points.set(i, points.get(i).reflect2DX());
         }
         drawVectors();
     }
@@ -230,9 +237,9 @@ public class TransformationWorkSpace extends BorderPane {
      */
     private void reflectY()
     {
-        for (int i = 0; i < points.length; i++)
+        for (int i = 0; i < points.size(); i++)
         {
-            points[i] = points[i].reflect2DY();
+            points.set(i, points.get(i).reflect2DY());
         }
         drawVectors();
     }
@@ -244,9 +251,9 @@ public class TransformationWorkSpace extends BorderPane {
     private void rotateCW(int degrees)
     {
         double rad = degrees * (Math.PI / 180);
-        for (int i = 0; i < points.length; i++)
+        for (int i = 0; i < points.size(); i++)
         {
-            points[i] = points[i].rotate2D(rad, true);
+            points.set(i, points.get(i).rotate2D(rad, true));
         }
         drawVectors();
     }
@@ -258,35 +265,35 @@ public class TransformationWorkSpace extends BorderPane {
     private void rotateCCW(int degrees)
     {
         double rad = degrees * (Math.PI / 180);
-        for (int i = 0; i < points.length; i++)
+        for (int i = 0; i < points.size(); i++)
         {
-            points[i] = points[i].rotate2D(rad, false);
+            points.set(i, points.get(i).rotate2D(rad, false));
         }
         drawVectors();
     }
 
     /**
-     * Shears all Vectors in the points array along the x axis. {@see vectortransform.Vector.shear(int, int, int, double) shear} method.
+     * Shears all Vectors in the points array along the x axis. See {@see vectortransform.Vector.shear(int, int, int, double) shear} method.
      * @param scalar The value by which to scale.
      */
     private void shearX(double scalar)
     {
-        for (int i = 0; i < points.length; i++)
+        for (int i = 0; i < points.size(); i++)
         {
-            points[i] = points[i].shear2DX(scalar);
+            points.set(i, points.get(i).shear2DX(scalar));
         }
         drawVectors();
     }
 
     /**
-     * Scales all Vectors in the points array along the y axis. {@see vectortransform.Vector.shear(int, int, int, double) shear} method.
+     * Scales all Vectors in the points array along the y axis. See {@see vectortransform.Vector.shear(int, int, int, double) shear} method.
      * @param scalar The value by which to scale.
      */
     private void shearY(double scalar)
     {
-        for (int i = 0; i < points.length; i++)
+        for (int i = 0; i < points.size(); i++)
         {
-            points[i] = points[i].shear2DY(scalar);
+            points.set(i, points.get(i).shear2DY(scalar));
         }
         drawVectors();
     }

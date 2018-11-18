@@ -7,6 +7,8 @@ import javafx.scene.shape.Line;
 import javafx.scene.shape.Polygon;
 import javafx.scene.text.Text;
 
+import java.util.LinkedList;
+
 /**
  * Graphics class representing a Cartesian coordinate grid. Can display position vectors and polygons.
  * @author Max Thurell
@@ -100,7 +102,7 @@ public class CoordinateGrid extends Pane{
      * @param vectors The vectors from which to build the VectorPolygon.
      * @return VectorPolygon based on vector array.
      */
-    private VectorPolygon makeVectorPolygon(Vector[] vectors)
+    private VectorPolygon makeVectorPolygon(LinkedList<Vector> vectors)
     {
         Vector origin = new Vector(xOrigin, yOrigin);
         return new VectorPolygon(vectors, origin);
@@ -110,7 +112,7 @@ public class CoordinateGrid extends Pane{
      * Draws a polygon on the grid based on a VectorPolygon built from a Vector array.
      * @param vectors The vectors from which to draw the polygon.
      */
-    public void drawVectorPolygon(Vector[] vectors)
+    public void drawVectorPolygon(LinkedList<Vector> vectors)
     {
         VectorPolygon vectorPolygon = makeVectorPolygon(vectors);
         Polygon polygon = new Polygon();
@@ -132,7 +134,7 @@ public class CoordinateGrid extends Pane{
      *
      * @param vectors The vectors from which to draw the points.
      */
-    public void drawPositionVectors(Vector[] vectors)
+    public void drawPositionVectors(LinkedList<Vector> vectors)
     {
         getChildren().clear();
         setAxes();

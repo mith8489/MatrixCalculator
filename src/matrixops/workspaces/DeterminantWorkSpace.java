@@ -1,10 +1,11 @@
 package matrixops.workspaces;
 
+import com.test.mthur.matrix.Fraction;
 import javafx.scene.Group;
 import javafx.scene.control.TextField;
 import base.CalcGUI;
 import matrixops.VisualMatrix;
-import matrixops.maths.Fraction;
+
 
 /**
  * DeterminantWorkSpace.java: Graphical interface for finding matrix determinants.

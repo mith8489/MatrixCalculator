@@ -36,7 +36,9 @@ public class DecimalMatrix {
     }
 
     private void setData(double[][] data) {
-        this.data = data;
+        for (int i = 0; i < data.length; i++)
+            for (int j = 0; j < data[0].length; j++)
+                this.data[i][j] = data[i][j];
     }
 
     public void setElement(int i, int j, double val) {
@@ -70,6 +72,9 @@ public class DecimalMatrix {
         this.M = M;
         this.N = N;
         data = new double[M][N];
+        for (int i = 0; i < M; i++)
+        for (int j = 0; j < N; j++)
+            this.data[i][j] = 0;
     }
 
     /**
@@ -109,12 +114,15 @@ public class DecimalMatrix {
      *
      * @param vector The vector with the data to be added.
      * @return DecimalMatrix with vector added.
+     * @throws IllegalArgumentException if the Vector to be added has a different number of elements than this matrix has rows.
      */
     public DecimalMatrix concatenateVector(Vector vector)
     {
         if (vector.getM() != M) throw new IllegalArgumentException("Incompatible vector dimensions");
         DecimalMatrix newMatrix = new DecimalMatrix(M, N + 1);
+        newMatrix.show();
         newMatrix.setData(data);
+        newMatrix.show();
         for (int i = 0; i < M; i++)
         {
             newMatrix.setElement(i, N, vector.getElement(i));
