@@ -1,6 +1,6 @@
 package matrixops.workspaces;
 
-import com.test.mthur.matrix.Fraction;
+import base.Fraction;
 import javafx.scene.Group;
 import javafx.scene.control.TextField;
 import base.CalcGUI;

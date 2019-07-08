@@ -1,7 +1,6 @@
 package matrixops.workspaces;
 
-import com.test.mthur.matrix.Fraction;
-import com.test.mthur.matrix.FractionMatrix;
+import base.Fraction;
 import javafx.collections.ObservableList;
 import javafx.scene.Group;
 import javafx.scene.Node;
@@ -14,6 +13,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import base.CalcGUI;
 import matrixops.VisualMatrix;
+import matrixops.FractionMatrix;
 
 /**
  * Base graphical interface for working with matrix operations.
